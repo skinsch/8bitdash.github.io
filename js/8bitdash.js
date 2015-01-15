@@ -1,6 +1,7 @@
 var Dash = function() {
 
   var credits = {
+    "dungeon.gif":"http://opengameart.org/content/a-blocky-dungeon",
     "sw.jpg":"Aled Lewis - Creative Commons Attribution License",
     "chicago.jpg":"Topher McCulloch - Creative Commons Attribution License",
     "bridge.gif":"Mark Ferrari",
@@ -19,7 +20,8 @@ var Dash = function() {
   }
 
   var modes = {"landscapes": 
-    ["sw.jpg", "chicago.jpg"],
+    ["dungeon.gif","chicago.jpg"],
+
     /** ["bridge.gif",
      "coast.gif",
      "dawn.gif", 
