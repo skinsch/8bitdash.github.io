@@ -184,6 +184,7 @@ window.onload = function() {
   var dash = new Dash()
   var basil = new window.Basil(); 
 
+  /**
   dash.initialize(basil) 
   var gui = new dat.GUI();
   dat.GUI.toggleHide();
@@ -220,6 +221,6 @@ window.onload = function() {
   Mousetrap.bind("p", function() {
     window.location.href = "https://www.google.com/images"
   });
-
+*/
 }
 
