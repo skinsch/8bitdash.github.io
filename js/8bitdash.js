@@ -1,6 +1,9 @@
 var Dash = function() {
 
   var credits = {
+    "town.png":"http://www.serebiiforums.com/showthread.php?379701-Another-Sprite-Showcase",
+    "ironberg.png":"http://www.serebiiforums.com/showthread.php?379701-Another-Sprite-Showcase",
+    "forrest.png":"http://www.serebiiforums.com/showthread.php?379701-Another-Sprite-Showcase",
     "leonard.png":"http://opengameart.org/content/whispers-of-avalon-grassland-tileset",
     "arkanos.png":"http://opengameart.org/content/mage-city-arcanos",
     "dungeon.gif":"http://opengameart.org/content/a-blocky-dungeon",
@@ -22,7 +25,7 @@ var Dash = function() {
   }
 
   var modes = {"landscapes": 
-    ["leonard.png", "dungeon.gif","chicago.jpg"],
+    ["town.png", "ironberg.png", "forrest.png", "leonard.png", "dungeon.gif","chicago.jpg"],
 
     /** ["bridge.gif",
      "coast.gif",
@@ -127,6 +130,12 @@ var Dash = function() {
     // read the configuration
     this.basil = basil;
     
+    var keys = basil.keys()
+    if(keys.indexOf("mode") != -1) {
+      this.curMode = basil.get("mode");
+      console.log("loaded mode from saved settings")
+    }
+
     // random background
     var x = Math.random() * modes[this.curMode].length;
     this.curIndex = Math.floor(x);
@@ -200,12 +209,12 @@ window.onload = function() {
   })
 
   if(basil.keys().indexOf('done-tutorial') == -1) {
-    alertify.log("Press H for settings");
+    alertify.log("Show your CC-licensed pixel art: @madewithtea");
   }
 
   updateClock();
   setInterval('updateClock()', 10000 )
-  
+
   Mousetrap.bind("right", function() {
     dash.nextBackground()});
   Mousetrap.bind("left", function() {
