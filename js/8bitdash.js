@@ -4,6 +4,8 @@ var Dash = function() {
     "mockup.gif":"http://bitslap.se/",
     "bitslap.gif":"http://bitslap.se/",
     "asylumgate.gif":"http://bitslap.se/",
+    "nightcycle.gif":"http://bitslap.se/",
+    "fireflyreboot.gif":"http://bitslap.se/",
     "town.png":"http://www.serebiiforums.com/showthread.php?379701-Another-Sprite-Showcase",
     "ironberg.png":"http://www.serebiiforums.com/showthread.php?379701-Another-Sprite-Showcase",
     "forrest.png":"http://www.serebiiforums.com/showthread.php?379701-Another-Sprite-Showcase",
@@ -28,7 +30,7 @@ var Dash = function() {
   }
 
   var modes = {"landscapes": 
-    ["mockup.gif", "asylumgate.gif", "bitslap.gif","town.png", "ironberg.png", "forrest.png", "leonard.png", "dungeon.gif","chicago.jpg"]
+    ["nightcycle.gif", "fireflyreboot.gif", "mockup.gif", "asylumgate.gif", "bitslap.gif","town.png", "ironberg.png", "forrest.png", "leonard.png", "dungeon.gif","chicago.jpg"]
   }
   
   this.curMode = "landscapes";
