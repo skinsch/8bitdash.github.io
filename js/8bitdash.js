@@ -127,12 +127,6 @@ var Dash = function() {
     // read the configuration
     this.basil = basil;
     
-    var keys = basil.keys()
-    if(keys.indexOf("mode") != -1) {
-      this.curMode = basil.get("mode");
-      console.log("loaded mode from saved settings")
-    }
-
     // random background
     var x = Math.random() * modes[this.curMode].length;
     this.curIndex = Math.floor(x);
@@ -211,7 +205,7 @@ window.onload = function() {
 
   updateClock();
   setInterval('updateClock()', 10000 )
-
+  
   Mousetrap.bind("right", function() {
     dash.nextBackground()});
   Mousetrap.bind("left", function() {
