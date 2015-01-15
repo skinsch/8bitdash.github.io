@@ -12,7 +12,8 @@ var Dash = function() {
     "nature.gif": "Mark Ferrari",
     "castle.gif": "Mark Ferrari",
     "grandcanyon.gif": "Mark Ferrari",
-    "sea.gif": "Mark Ferrari"
+    "sea.gif": "Mark Ferrari",
+    "cyber.gif": "http://flexroman.tumblr.com/"
   }
 
   var modes = {"landscapes": 
