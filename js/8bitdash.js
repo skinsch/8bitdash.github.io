@@ -12,7 +12,8 @@ var Dash = function() {
     "nature.gif": "Mark Ferrari",
     "castle.gif": "Mark Ferrari",
     "grandcanyon.gif": "Mark Ferrari",
-    "sea.gif": "Mark Ferrari"
+    "sea.gif": "Mark Ferrari",
+    "cyber.gif": "http://flexroman.tumblr.com/"
   }
 
   var modes = {"landscapes": 
@@ -27,9 +28,11 @@ var Dash = function() {
      "bridge_raining.gif",
      "snow.gif", 
      "nature.gif",
-     "sea.gif"],
+     "sea.gif",
+     "forrest.gif"],
      "gaming":
-    ["gaming.gif",
+    ["cyber.gif",
+     "gaming.gif",
      "bridge.gif",
      "kirby.gif",
      "hyperlight.gif",
@@ -40,7 +43,8 @@ var Dash = function() {
      "shovelnight.gif",
      "zelda2.gif",
      "watchdogs.gif",
-     "kirby2.gif"],
+     "kirby2.gif",
+     "samurai.gif"],
      "cities":
     ["koreanscene.gif",
      "of_fire_and_waves_0.gif",
@@ -92,7 +96,7 @@ var Dash = function() {
     if(file in credits) {
       this.changeCredit(credits[file]);
     } else {
-      this.changeCredit("Take credit as artist here.")
+      this.changeCredit("Mention me @madewithtea to take credit for your art.")
     }
   } 
 
