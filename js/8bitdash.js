@@ -1,6 +1,7 @@
 var Dash = function() {
 
   var credits = {
+    "sw.jpg":"Aled Lewis - Creative Commons Attribution License",
     "chicago.jpg":"Topher McCulloch - Creative Commons Attribution License",
     "bridge.gif":"Mark Ferrari",
     "falls.gif":"Mark Ferrari",
@@ -18,7 +19,7 @@ var Dash = function() {
   }
 
   var modes = {"landscapes": 
-    ["chicago.jpg"],
+    ["sw.jpg", "chicago.jpg"],
     /** ["bridge.gif",
      "coast.gif",
      "dawn.gif", 
