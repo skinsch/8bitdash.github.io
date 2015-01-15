@@ -1,6 +1,9 @@
 var Dash = function() {
 
   var credits = {
+    "mockup.gif":"http://bitslap.se/",
+    "bitslap.gif":"http://bitslap.se/",
+    "asylumgate.gif":"http://bitslap.se/",
     "town.png":"http://www.serebiiforums.com/showthread.php?379701-Another-Sprite-Showcase",
     "ironberg.png":"http://www.serebiiforums.com/showthread.php?379701-Another-Sprite-Showcase",
     "forrest.png":"http://www.serebiiforums.com/showthread.php?379701-Another-Sprite-Showcase",
@@ -25,7 +28,7 @@ var Dash = function() {
   }
 
   var modes = {"landscapes": 
-    ["town.png", "ironberg.png", "forrest.png", "leonard.png", "dungeon.gif","chicago.jpg"]
+    ["mockup.gif", "asylumgate.gif", "bitslap.gif","town.png", "ironberg.png", "forrest.png", "leonard.png", "dungeon.gif","chicago.jpg"]
   }
   
   this.curMode = "landscapes";
