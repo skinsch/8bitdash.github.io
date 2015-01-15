@@ -25,54 +25,7 @@ var Dash = function() {
   }
 
   var modes = {"landscapes": 
-    ["town.png", "ironberg.png", "forrest.png", "leonard.png", "dungeon.gif","chicago.jpg"],
-
-    /** ["bridge.gif",
-     "coast.gif",
-     "dawn.gif", 
-     "grandcanyon.gif",
-     "northlights.gif",
-     "lake.gif",
-     "falls.gif", 
-     "castle.gif",
-     "bridge_raining.gif",
-     "snow.gif", 
-     "nature.gif",
-     "sea.gif",
-     "forrest.gif"],**/
-     "gaming":
-    ["cyber.gif",
-     "gaming.gif",
-     "bridge.gif",
-     "kirby.gif",
-     "hyperlight.gif",
-     "hyperlight2.gif",
-     "mario.gif",
-     "iplayold.gif",
-     "iplayold2.gif",
-     "shovelnight.gif",
-     "zelda2.gif",
-     "watchdogs.gif",
-     "kirby2.gif",
-     "samurai.gif"],
-     "cities":
-    ["koreanscene.gif",
-     "of_fire_and_waves_0.gif",
-     "of_fire_and_waves_1.gif",
-     "of_fire_and_waves_2.gif",
-     "urban.gif"],
-     "movies":
-    ["armageddon.gif",
-    "biglebowski.gif",
-    "et.gif",
-    "ghostbusters.gif",
-    "indianajones.gif",
-    "jurassic.gif",
-    "looper.gif",
-    "pulpfiction.gif",
-    "robin.gif",
-    "spaceodysee.gif",
-    "starwards.gif"]
+    ["town.png", "ironberg.png", "forrest.png", "leonard.png", "dungeon.gif","chicago.jpg"]
   }
   
   this.curMode = "landscapes";
@@ -130,12 +83,6 @@ var Dash = function() {
     // read the configuration
     this.basil = basil;
     
-    var keys = basil.keys()
-    if(keys.indexOf("mode") != -1) {
-      this.curMode = basil.get("mode");
-      console.log("loaded mode from saved settings")
-    }
-
     // random background
     var x = Math.random() * modes[this.curMode].length;
     this.curIndex = Math.floor(x);
