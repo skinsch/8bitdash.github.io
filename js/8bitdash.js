@@ -1,6 +1,8 @@
 var Dash = function() {
 
   var credits = {
+    "leonard.png":"http://opengameart.org/content/whispers-of-avalon-grassland-tileset",
+    "arkanos.png":"http://opengameart.org/content/mage-city-arcanos",
     "dungeon.gif":"http://opengameart.org/content/a-blocky-dungeon",
     "sw.jpg":"Aled Lewis - Creative Commons Attribution License",
     "chicago.jpg":"Topher McCulloch - Creative Commons Attribution License",
@@ -20,7 +22,7 @@ var Dash = function() {
   }
 
   var modes = {"landscapes": 
-    ["dungeon.gif","chicago.jpg"],
+    ["leonard.png", "dungeon.gif","chicago.jpg"],
 
     /** ["bridge.gif",
      "coast.gif",
