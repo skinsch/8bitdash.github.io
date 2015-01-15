@@ -1,7 +1,7 @@
 var Dash = function() {
 
   var credits = {
-    "chicago.jpg":"Topher McCulloch",
+    "chicago.jpg":"Topher McCulloch - Creative Commons Attribution License",
     "bridge.gif":"Mark Ferrari",
     "falls.gif":"Mark Ferrari",
     "coast.gif":"Mark Ferrari",
