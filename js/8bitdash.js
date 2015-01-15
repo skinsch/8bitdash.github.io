@@ -1,6 +1,7 @@
 var Dash = function() {
 
   var credits = {
+    "chicago.jpg":"Topher McCulloch",
     "bridge.gif":"Mark Ferrari",
     "falls.gif":"Mark Ferrari",
     "coast.gif":"Mark Ferrari",
@@ -17,7 +18,8 @@ var Dash = function() {
   }
 
   var modes = {"landscapes": 
-    ["bridge.gif",
+    ["chicago.jpg"],
+    /** ["bridge.gif",
      "coast.gif",
      "dawn.gif", 
      "grandcanyon.gif",
@@ -29,7 +31,7 @@ var Dash = function() {
      "snow.gif", 
      "nature.gif",
      "sea.gif",
-     "forrest.gif"],
+     "forrest.gif"],**/
      "gaming":
     ["cyber.gif",
      "gaming.gif",
@@ -188,12 +190,11 @@ window.onload = function() {
   var dash = new Dash()
   var basil = new window.Basil(); 
 
-  /**
   dash.initialize(basil) 
   var gui = new dat.GUI();
   dat.GUI.toggleHide();
 
-  var themes = gui.add(dash, "theme", ["movies","cities", "gaming", "landscapes"])
+  var themes = gui.add(dash, "theme", ["landscapes"])
 
   themes.onChange(function(value) {
     dash.changeMode(value);
@@ -225,6 +226,5 @@ window.onload = function() {
   Mousetrap.bind("p", function() {
     window.location.href = "https://www.google.com/images"
   });
-*/
 }
 

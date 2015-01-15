@@ -10,7 +10,9 @@
 
 #center {
   position: absolute;
-  top:40%;
+  top:0;
+  width:640px;
+  height:100px;
   bottom: 0;
   left: 0;
   right: 0;
