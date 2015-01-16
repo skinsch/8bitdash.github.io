@@ -209,6 +209,12 @@ window.onload = function() {
   Mousetrap.bind("y", function() {
     window.location.href = "https://www.youtube.com"
   });
+  Mousetrap.bind("m", function() {
+    window.location.href = "https://maps.google.com"
+  });
+  Mousetrap.bind("s", function() {
+    window.location.href = "https://www.openstreetmap.org/"
+  });
   Mousetrap.bind("w", function() {
     window.location.href = "https://www.wikipedia.com"
   });
