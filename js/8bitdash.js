@@ -1,19 +1,6 @@
 var Dash = function() {
 
   var credits = {
-    "mockup.gif":"http://bitslap.se/",
-    "bitslap.gif":"http://bitslap.se/",
-    "asylumgate.gif":"http://bitslap.se/",
-    "nightcycle.gif":"http://bitslap.se/",
-    "fireflyreboot.gif":"http://bitslap.se/",
-    "town.png":"http://www.serebiiforums.com/showthread.php?379701-Another-Sprite-Showcase",
-    "ironberg.png":"http://www.serebiiforums.com/showthread.php?379701-Another-Sprite-Showcase",
-    "forrest.png":"http://www.serebiiforums.com/showthread.php?379701-Another-Sprite-Showcase",
-    "leonard.png":"http://opengameart.org/content/whispers-of-avalon-grassland-tileset",
-    "arkanos.png":"http://opengameart.org/content/mage-city-arcanos",
-    "dungeon.gif":"http://opengameart.org/content/a-blocky-dungeon",
-    "sw.jpg":"Aled Lewis - Creative Commons Attribution License",
-    "chicago.jpg":"Topher McCulloch - Creative Commons Attribution License",
     "bridge.gif":"Mark Ferrari",
     "falls.gif":"Mark Ferrari",
     "coast.gif":"Mark Ferrari",
@@ -30,7 +17,52 @@ var Dash = function() {
   }
 
   var modes = {"landscapes": 
-    ["nightcycle.gif", "fireflyreboot.gif", "mockup.gif", "asylumgate.gif", "bitslap.gif","town.png", "ironberg.png", "forrest.png", "leonard.png", "dungeon.gif","chicago.jpg"]
+    ["bridge.gif",
+     "coast.gif",
+     "dawn.gif", 
+     "grandcanyon.gif",
+     "northlights.gif",
+     "lake.gif",
+     "falls.gif", 
+     "castle.gif",
+     "bridge_raining.gif",
+     "snow.gif", 
+     "nature.gif",
+     "sea.gif",
+     "forrest.gif"],
+     "gaming":
+    ["cyber.gif",
+     "gaming.gif",
+     "bridge.gif",
+     "kirby.gif",
+     "hyperlight.gif",
+     "hyperlight2.gif",
+     "mario.gif",
+     "iplayold.gif",
+     "iplayold2.gif",
+     "shovelnight.gif",
+     "zelda2.gif",
+     "watchdogs.gif",
+     "kirby2.gif",
+     "samurai.gif"],
+     "cities":
+    ["koreanscene.gif",
+     "of_fire_and_waves_0.gif",
+     "of_fire_and_waves_1.gif",
+     "of_fire_and_waves_2.gif",
+     "urban.gif"],
+     "movies":
+    ["armageddon.gif",
+    "biglebowski.gif",
+    "et.gif",
+    "ghostbusters.gif",
+    "indianajones.gif",
+    "jurassic.gif",
+    "looper.gif",
+    "pulpfiction.gif",
+    "robin.gif",
+    "spaceodysee.gif",
+    "starwards.gif"]
   }
   
   this.curMode = "landscapes";
@@ -88,6 +120,12 @@ var Dash = function() {
     // read the configuration
     this.basil = basil;
     
+    var keys = basil.keys()
+    if(keys.indexOf("mode") != -1) {
+      this.curMode = basil.get("mode");
+      console.log("loaded mode from saved settings")
+    }
+
     // random background
     var x = Math.random() * modes[this.curMode].length;
     this.curIndex = Math.floor(x);
@@ -154,14 +192,14 @@ window.onload = function() {
   var gui = new dat.GUI();
   dat.GUI.toggleHide();
 
-  var themes = gui.add(dash, "theme", ["landscapes"])
+  var themes = gui.add(dash, "theme", ["movies","cities", "gaming", "landscapes"])
 
   themes.onChange(function(value) {
     dash.changeMode(value);
   })
 
   if(basil.keys().indexOf('done-tutorial') == -1) {
-    alertify.log("Show your CC-licensed pixel art: @madewithtea");
+    alertify.log("Press H for settings");
   }
 
   updateClock();
@@ -186,5 +224,6 @@ window.onload = function() {
   Mousetrap.bind("p", function() {
     window.location.href = "https://www.google.com/images"
   });
+
 }
 
