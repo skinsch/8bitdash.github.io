@@ -214,7 +214,7 @@ window.onload = function() {
   });
   Mousetrap.bind("b", function() {
     window.location.href = "https://www.bing.com"
-  }
+  });
   Mousetrap.bind("t", function() {
     window.location.href = "https://www.twitter.com"
   });
