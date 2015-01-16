@@ -109,8 +109,8 @@ var Dash = function() {
     this.basil = basil;
     
     var keys = basil.keys()
-    if(keys.indexOf("mode") != -1) {
-      this.curMode = basil.get("mode");
+    if(keys.indexOf("mode2") != -1) {
+      this.curMode = basil.get("mode2");
       console.log("loaded mode from saved settings")
     }
 
@@ -126,7 +126,7 @@ var Dash = function() {
     this.curIndex = 0
     this.updateBackground();
 
-    this.basil.set("mode", mode);
+    this.basil.set("mode2", mode);
     this.basil.set("done-tutorial", true);
     alertify.log("Saved settings")
   } 
