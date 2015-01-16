@@ -1,6 +1,17 @@
 var Dash = function() {
 
   var credits = {
+    "mockup.gif":"http://bitslap.se/",
+    "bitslap.gif":"http://bitslap.se/",
+    "asylumgate.gif":"http://bitslap.se/",
+    "nightcycle.gif":"http://bitslap.se/",
+    "fireflyreboot.gif":"http://bitslap.se/",
+    "town.png":"http://www.serebiiforums.com/showthread.php?379701-Another-Sprite-Showcase",
+    "ironberg.png":"http://www.serebiiforums.com/showthread.php?379701-Another-Sprite-Showcase",
+    "forrest.png":"http://www.serebiiforums.com/showthread.php?379701-Another-Sprite-Showcase",
+    "leonard.png":"http://opengameart.org/content/whispers-of-avalon-grassland-tileset",
+    "arkanos.png":"http://opengameart.org/content/mage-city-arcanos",
+    "dungeon.gif":"http://opengameart.org/content/a-blocky-dungeon",
     "bridge.gif":"Mark Ferrari",
     "falls.gif":"Mark Ferrari",
     "coast.gif":"Mark Ferrari",
@@ -28,41 +39,18 @@ var Dash = function() {
      "bridge_raining.gif",
      "snow.gif", 
      "nature.gif",
-     "sea.gif",
-     "forrest.gif"],
-     "gaming":
-    ["cyber.gif",
-     "gaming.gif",
-     "bridge.gif",
-     "kirby.gif",
-     "hyperlight.gif",
-     "hyperlight2.gif",
-     "mario.gif",
-     "iplayold.gif",
-     "iplayold2.gif",
-     "shovelnight.gif",
-     "zelda2.gif",
-     "watchdogs.gif",
-     "kirby2.gif",
-     "samurai.gif"],
-     "cities":
-    ["koreanscene.gif",
-     "of_fire_and_waves_0.gif",
-     "of_fire_and_waves_1.gif",
-     "of_fire_and_waves_2.gif",
-     "urban.gif"],
-     "movies":
-    ["armageddon.gif",
-    "biglebowski.gif",
-    "et.gif",
-    "ghostbusters.gif",
-    "indianajones.gif",
-    "jurassic.gif",
-    "looper.gif",
-    "pulpfiction.gif",
-    "robin.gif",
-    "spaceodysee.gif",
-    "starwards.gif"]
+     "sea.gif"],
+     "other": 
+    ["nightcycle.gif", 
+    "fireflyreboot.gif", 
+    "mockup.gif", 
+    "asylumgate.gif", 
+    "bitslap.gif",
+    "town.png", 
+    "ironberg.png", 
+    "forrest.png", 
+    "leonard.png", 
+    "dungeon.gif"]
   }
   
   this.curMode = "landscapes";
@@ -192,7 +180,7 @@ window.onload = function() {
   var gui = new dat.GUI();
   dat.GUI.toggleHide();
 
-  var themes = gui.add(dash, "theme", ["movies","cities", "gaming", "landscapes"])
+  var themes = gui.add(dash, "theme", ["landscapes", "other"])
 
   themes.onChange(function(value) {
     dash.changeMode(value);
