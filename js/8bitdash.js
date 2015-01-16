@@ -200,6 +200,30 @@ window.onload = function() {
   Mousetrap.bind("g", function() {
     window.location.href = "https://www.github.com"
   });
+  Mousetrap.bind("r", function() {
+    window.location.href = "https://www.reddit.com"
+  });
+  Mousetrap.bind("f", function() {
+    window.location.href = "https://www.facebook.com"
+  });
+  Mousetrap.bind("y", function() {
+    window.location.href = "https://www.youtube.com"
+  });
+  Mousetrap.bind("w", function() {
+    window.location.href = "https://www.wikipedia.com"
+  });
+  Mousetrap.bind("b", function() {
+    window.location.href = "https://www.bing.com"
+  }
+  Mousetrap.bind("t", function() {
+    window.location.href = "https://www.twitter.com"
+  });
+  Mousetrap.bind("d", function() {
+    window.location.href = "https://www.digg.com"
+  });
+  Mousetrap.bind("d", function() {
+    window.location.href = "https://www.digg.com"
+  });
   Mousetrap.bind("e", function() {
     window.location.href = "https://www.ebay.com"
   });
