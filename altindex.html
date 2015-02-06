@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+ 
+    <style>
+    body { 
+      background: no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      font-family: 'minecraftfont';
+      color: #fff;
+    }
+    </style>
+
+   
+    <link rel="stylesheet" href="bower_components/skeleton/normalize.css">
+    <link rel="stylesheet" href="bower_components/skeleton/skeleton.css">
+
+	<link rel="stylesheet" type="text/css" href="bower_components/fullpage.js/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="css/examples.css" />
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="bower_components/alertifyjs/dist/css/alertify.css">
+    <script src="bower_components/dat-gui/build/dat.gui.min.js"></script>
+    <script src="bower_components/alertifyjs/dist/js/alertify.js"></script>
+    <script src="bower_components/mousetrap/mousetrap.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="bower_components/fullpage.js/jquery.fullPage.js"></script>
+	
+    <script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+       			css3: true,
+                resize: false
+       		});
+		});
+	</script>
+
+    <script src="bower_components/basil.js/build/basil.min.js"></script>
+
+
+    <script src="js/8bitdash.js"></script>
+
+
+</head>
+<body>
+<div id="fullpage">
+	<div class="section " id="dash">
+      <div id="clock">  
+      </div>
+      <div id="greeting">
+    	Good evening
+      </div>
+      <div id="footer">
+      </div>
+    </div>
+	<div class="section" id="map">
+      <div class="container">
+        <div class="row" id="mapheader">
+          <div id="maplogo"><img src="images/map.png"/></div>
+          <div id="maptitle">Map</div>
+        </div>
+        <div class="row">
+          <div class="one-third column">
+            <h2>Information</h2>
+             <ul>
+              <li><a href="http://www.wikipedia.org">Wikipedia</a></li>
+              <li><a href="http://www.archive.org">Archive.org</a></li>
+              <li><a href="http://www.thefreedictionary.com/">Free Dictionary</a></li>
+              <li><a href="http://www.urbandictionary.com/">Urban Dictionary</a></li>
+            </ul>
+             
+          </div>
+          <div class="one-third column">
+            <h2>Commerce</h2>
+            <ul>
+              <li><a href="http://www.amazon.com">Amazon</a></li>
+              <li><a href="http://www.ebay.com">Ebay</a></li>
+              <li><a href="http://www.etsy.com">Etsy</a></li>
+              <li><a href="http://www.dawanda.com">Dawanda</a></li>
+            </ul>
+          </div>
+          <div class="one-third column">
+            <h2>Games</h2>
+            <ul>
+              <li><a href="http://store.steampowered.com/">Steam</a></li>
+              <li><a href="http://itch.io/">itch.io</a></li>
+              <li><a href="http://desura.com/">Desura</a></li>
+              <li><a href="http://ludumdare.com/">Ludum Dare</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="one-third column">
+            <h2>Networks</h2>
+             <ul>
+              <li><a href="http://www.facebook.com">Facebook</a></li>
+              <li><a href="http://www.twitter.com">Twitter</a></li>
+              <li><a href="http://www.diaspora.com/">Diaspora*</a></li>
+              <li><a href="http://www.urbandictionary.com/">Urban Dictionary</a></li>
+            </ul>
+             
+          </div>
+          <div class="one-third column">
+            <h2>Music</h2>
+            <ul>
+              <li><a href="http://www.amazon.com">Spotify</a></li>
+              <li><a href="http://www.ebay.com">Bandcamp</a></li>
+              <li><a href="http://www.etsy.com">Pandora</a></li>
+              <li><a href="http://www.dawanda.com">Google Play</a></li>
+            </ul>
+          </div>
+          <div class="one-third column">
+            <h2>Video</h2>
+            <ul>
+              <li><a href="http://store.steampowered.com/">YouTube</a></li>
+              <li><a href="http://itch.io/">Twitch.tv</a></li>
+              <li><a href="http://desura.com/">Desura</a></li>
+              <li><a href="http://ludumdare.com/">Ludum Dare</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div> 
+    </div>
+</div>
+
+</body>
+</html>
