@@ -1,3 +1,5 @@
+var pageIndex = 1
+
 var Dash = function() {
 
   var credits = {
@@ -54,12 +56,13 @@ var Dash = function() {
   }
   
   this.curMode = "landscapes";
+  this.page = "clock"
   this.curIndex = 0;
 
   // controllable via Dat.GUI
   this.showClock = true;
   this.showGreeter = true;
-  this.name = "jendrik";
+  this.username = "";
   this.theme = "landscapes"
 
   this.changeBackground = function(background) {
@@ -114,6 +117,12 @@ var Dash = function() {
       console.log("loaded mode from saved settings")
     }
 
+    if(keys.indexOf("page") != -1) {
+      this.page = basil.get("page")
+      this.changePage(this.page);
+      console.log("loaded page from saved settings")
+    }
+
     // random background
     var x = Math.random() * modes[this.curMode].length;
     this.curIndex = Math.floor(x);
@@ -128,8 +137,18 @@ var Dash = function() {
 
     this.basil.set("mode2", mode);
     this.basil.set("done-tutorial", true);
-    alertify.log("Saved settings")
   } 
+
+  this.changePage = function(page) {
+    this.page = page
+    this.basil.set("page", page);
+   
+    if(page == "clock") {
+      $.fn.fullpage.moveTo(1,1);
+    } else {
+      $.fn.fullpage.moveTo(2,1);
+    }
+  }
 }
 
 var updateClock = function() {
@@ -173,6 +192,15 @@ var updateClock = function() {
   }
 
 window.onload = function() {
+
+  $('#fullpage').fullpage({
+     resize: false,
+     css3: true,
+     onLeave: function(index, nextIndex, direction){
+      pageIndex = nextIndex 
+     }
+  })
+
   var dash = new Dash()
   var basil = new window.Basil(); 
 
@@ -180,14 +208,27 @@ window.onload = function() {
   var gui = new dat.GUI();
   dat.GUI.toggleHide();
 
-  var themes = gui.add(dash, "theme", ["landscapes", "other"])
+  var f1 = gui.addFolder('default');
+  var themes = f1.add(dash, "theme", ["landscapes", "other"]);
+  var pages = f1.add(dash, "page", ["clock", "map"]);
+  f1.open();
+
+  var f2 = gui.addFolder('user');
+  var name = f2.add(dash, "username");
+  f2.open();
 
   themes.onChange(function(value) {
     dash.changeMode(value);
+    alertify.log("Saved settings")
+  })
+
+  pages.onChange(function(value) {
+    dash.changePage(value);
+    alertify.log("Saved settings")
   })
 
   if(basil.keys().indexOf('done-tutorial') == -1) {
-    alertify.log("Press H for settings");
+    alertify.log("Arrow-Down for Map and H for Settings");
   }
 
   updateClock();
@@ -244,5 +285,6 @@ window.onload = function() {
   });
 
   initMap();
+
 }
 

@@ -149,12 +149,12 @@ var links = {
         {"title":"9GAG Meme", "url" : "http://9gag.com/meme"}
       ]},
        {
-      "title": "Development", 
+      "title": "Fun Projects", 
       "links" : [
-        {"title":"Portals", "url" : "https://github.com/ellisonleao/magictools#blogs-and-portals"},
-        {"title":"Tools", "url" : "https://github.com/ellisonleao/magictools"},
-        {"title":"Assets", "url" : "https://github.com/ellisonleao/magictools#assetsplaceholders"},
-        {"title":"Jams", "url" : "http://compohub.net"},
+        {"title":"Pointer Pointer", "url" : "http://www.pointerpointer.com/"},
+        {"title":"Eelslap", "url" : "http://eelslap.com/"},
+        {"title":"Corgiorgy", "url" : "http://corgiorgy.com"},
+        {"title":"Falling", "url" : "http://fallingfalling.com"},
         {"title":"Books", "url":"https://github.com/ellisonleao/magictools#books"}
       ]},
        {
