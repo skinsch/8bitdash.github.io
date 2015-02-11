@@ -49,8 +49,9 @@
 	</script>
 
     <script src="bower_components/basil.js/build/basil.min.js"></script>
+    <script src="bower_components/mustache.js/mustache.min.js"></script>
 
-
+    <script src="js/links.js"></script>
     <script src="js/8bitdash.js"></script>
 
 
@@ -70,66 +71,40 @@
       <div class="container">
         <div class="row" id="mapheader">
           <div id="maplogo"><img src="images/map.png"/></div>
-          <div id="maptitle">Map</div>
+          <div id="maptitle">Top-Sites Games Commerce</div>
+          <script id="topicTemplate" type="x-tmpl-mustache">
+            {{#topics}}
+               <a href="#" onClick="changeMap('{{name}}')">{{name}}</a>&nbsp;
+            {{/topics}}
+          </script>
         </div>
+           <script id="cell1" type="x-tmpl-mustache">
+              <h2>{{title}}</h2>
+              <ul>
+                {{#links}}
+                  <li><a href="{{{url}}}">{{title}}</a></li>
+                {{/links}}
+              </ul>
+            </script>
+ 
         <div class="row">
-          <div class="one-third column">
-            <h2>Information</h2>
-             <ul>
-              <li><a href="http://www.wikipedia.org">Wikipedia</a></li>
-              <li><a href="http://www.archive.org">Archive.org</a></li>
-              <li><a href="http://www.thefreedictionary.com/">Free Dictionary</a></li>
-              <li><a href="http://www.urbandictionary.com/">Urban Dictionary</a></li>
-            </ul>
-             
+ 
+          <div id="cell0target" class="one-third column">
+            x
           </div>
-          <div class="one-third column">
-            <h2>Commerce</h2>
-            <ul>
-              <li><a href="http://www.amazon.com">Amazon</a></li>
-              <li><a href="http://www.ebay.com">Ebay</a></li>
-              <li><a href="http://www.etsy.com">Etsy</a></li>
-              <li><a href="http://www.dawanda.com">Dawanda</a></li>
-            </ul>
+          <div id="cell1target" class="one-third column">
+            x
           </div>
-          <div class="one-third column">
-            <h2>Games</h2>
-            <ul>
-              <li><a href="http://store.steampowered.com/">Steam</a></li>
-              <li><a href="http://itch.io/">itch.io</a></li>
-              <li><a href="http://desura.com/">Desura</a></li>
-              <li><a href="http://ludumdare.com/">Ludum Dare</a></li>
-            </ul>
+          <div id="cell2target" class="one-third column">
+            x
           </div>
         </div>
         <div class="row">
-          <div class="one-third column">
-            <h2>Networks</h2>
-             <ul>
-              <li><a href="http://www.facebook.com">Facebook</a></li>
-              <li><a href="http://www.twitter.com">Twitter</a></li>
-              <li><a href="http://www.diaspora.com/">Diaspora*</a></li>
-              <li><a href="http://www.urbandictionary.com/">Urban Dictionary</a></li>
-            </ul>
-             
+          <div id="cell3target" class="one-third column">
           </div>
-          <div class="one-third column">
-            <h2>Music</h2>
-            <ul>
-              <li><a href="http://www.amazon.com">Spotify</a></li>
-              <li><a href="http://www.ebay.com">Bandcamp</a></li>
-              <li><a href="http://www.etsy.com">Pandora</a></li>
-              <li><a href="http://www.dawanda.com">Google Play</a></li>
-            </ul>
+          <div id="cell4target" class="one-third column">
           </div>
-          <div class="one-third column">
-            <h2>Video</h2>
-            <ul>
-              <li><a href="http://store.steampowered.com/">YouTube</a></li>
-              <li><a href="http://itch.io/">Twitch.tv</a></li>
-              <li><a href="http://desura.com/">Desura</a></li>
-              <li><a href="http://ludumdare.com/">Ludum Dare</a></li>
-            </ul>
+          <div id="cell5target" class="one-third column">
           </div>
         </div>
 
