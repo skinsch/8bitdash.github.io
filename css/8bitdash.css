@@ -8,6 +8,11 @@
     text-align: center;
 }
 
+#mapfooter {
+    font-size: 2em;
+    text-align: center;
+}
+
 #center {
   width: 640px;
   height: 100px;

@@ -213,10 +213,6 @@ window.onload = function() {
   var pages = f1.add(dash, "page", ["clock", "map"]);
   f1.open();
 
-  var f2 = gui.addFolder('user');
-  var name = f2.add(dash, "username");
-  f2.open();
-
   themes.onChange(function(value) {
     dash.changeMode(value);
     alertify.log("Saved settings")

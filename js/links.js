@@ -52,7 +52,7 @@ var links = {
         {"title":"NetFlix", "url" : "http://www.netflix.com"},
         {"title":"Vimeo", "url" : "http://www.vimeo.com"},
         {"title":"Twitch", "url" : "http://www.twitch.tv"},
-        {"title":"Daily Motion", "url":"http://www.vine.co"}
+        {"title":"Daily Motion", "url":"http://www.dailymotion.com"}
       ]}],
 
     "Games": [
@@ -68,11 +68,11 @@ var links = {
       { 
       "title": "News", 
       "links" : [ 
-        {"title":"IGN", "url" : "http://www.wikipedia.org"},
-        {"title":"GameFAQs", "url" : "http://www.khanacademy.org"},
-        {"title":"GameSpot", "url" : "http://www.gutenberg.org"}, 
-        {"title":"Kotaku", "url" : "http://www.archive.org"},
-        {"title":"N4G","url":"http://www.ted.com"}
+        {"title":"IGN", "url" : "http://www.ign.com"},
+        {"title":"GameFAQs", "url" : "http://www.gamefaqs.com"},
+        {"title":"GameSpot", "url" : "http://www.gamespot.com/"}, 
+        {"title":"Kotaku", "url" : "http://kotaku.com/"},
+        {"title":"N4G","url":"http://n4g.com/"}
       ]},
       {
       "title": "Lets Play", 
@@ -110,7 +110,116 @@ var links = {
         {"title":"Armor Games", "url" : "http://www.armorgames.com"},
         {"title":"Addicting Games", "url":"http://www.addictinggames.com"}
       ]}],
+    "Music": [
+       {
+      "title": "Underground", 
+      "links" : [ 
+        {"title": "UndergroundFM", "url" : "http://www.undergroundmusic.fm/trending"},
+        {"title":"CmdFM", "url" : "https://cmd.fm"},
+        {"title":"SomaFM", "url" : "http://somafm.com/"},
+        {"title":"Cratestream", "url": "http://www.cratestream.com/listen/"},
+        {"title":"Earbits", "url" : "http://www.earbits.com/"}
+      ]},
+      { 
+      "title": "Hype", 
+      "links" : [ 
+        {"title":"HypeM", "url" : "http://hypem.com/"},
+        {"title":"Upbeat", "url" : "http://www.upbeatapp.com/"},
+        {"title":"Audiomack", "url" : "http://www.audiomack.com/"}, 
+        {"title":"Last.fm", "url" : "http://www.last.fm/charts"},
+        {"title":"on Twitter","url":"http://hypem.com/twitter/popular"}
+      ]},
+      {
+      "title": "Hype Vote", 
+      "links" : [
+        {"title":"Upbeat", "url" : "http://www.upbeatapp.com/g/All/hot"},
+        {"title":"DropClub", "url" : "http://thedrop.club/best#play"},
+        {"title":"TasteKid", "url" : "http://www.tastekid.com/music"},
+        {"title":"TrackGuru", "url" : "http://www.trackguru.co/"}
+      ]},
+      {
+      "title": "Streaming", 
+      "links" : [
+        {"title":"Pandora", "url" : "http://www.pandora.com"},
+        {"title":"Yahoo! Music", "url" : "http://www.music.yahoo.com"},
+        {"title":"Google Play", "url" : "http://play.google.com`"},
+        {"title":"SoundCloud", "url" : "http://www.soundcloud.com"},
+        {"title":"Spotify", "url" : "http://www.spotify.com"}
+      ]},
+       {
+      "title": "Stores", 
+      "links" : [
+        {"title":"Bandcamp", "url" : "http://www.bandcamp.com/"},
+        {"title":"Amazon", "url" : "http://www.amazon.com/MP3-Music-Download/b?node=163856011"},
+        {"title":"Beatport", "url" : "https://www.beatport.com/"},
+        {"title":"Bleep", "url" : "https://bleep.com/"},
+        {"title":"Napster", "url":"http://napster.com/"}
+      ]},
+       {
+      "title": "Free", 
+      "links" : [
+        {"title":"Bandcamp", "url" : "http://www.bandcamp.com/"},
+        {"title":"FMA", "url" : "http://freemusicarchive.org/"},
+        {"title":"Jamendo", "url" : "https://www.jamendo.com/en/welcome"},
+        {"title":"Netlabels", "url" : "http://www.clongclongmoo.org/labels/"},
+        {"title":"Magnatune", "url":"http://magnatune.com/genres/ambient/"}
+      ]}],
 
+    "Tools": [
+       {
+      "title": "Documents", 
+      "links" : [ 
+        {"title": "Google Docs", "url" : "http://docs.google.com/"},
+        {"title":"Word Online", "url" : "https://office.live.com/start/Word.aspx"},
+        {"title":"Draftin", "url" : "http://www.draftin.com"},
+        {"title":"Dillinger", "url": "http://dillinger.io/"},
+        {"title":"Etherpad", "url" : "https://beta.etherpad.org/"}
+      ]},
+      { 
+      "title": "Publishing", 
+      "links" : [ 
+        {"title":"GitBook", "url" : "https://www.gitbook.com/"},
+        {"title":"LeanPub", "url" : "https://leanpub.com/"},
+        {"title":"BitBooks", "url" : "http://bitbooks.cc/"}, 
+        {"title":"Blurb", "url" : "http://www.blurb.com"},
+        {"title":"Lulu","url":"https://www.lulu.com/"}
+      ]},
+      {
+      "title": "Graphics", 
+      "links" : [
+        {"title":"Color", "url" : "https://color.adobe.com/"},
+        {"title":"Piskel", "url" : "http://www.piskelapp.com"},
+        {"title":"Pixelart", "url" : "http://www.pixilart.net/"},
+        {"title":"SculptGL", "url" : "http://stephaneginier.com/sculptgl/"},
+        {"title":"Photoshop", "url" : "http://www.photoshop.com/tools"}
+      ]},
+      {
+      "title": "Relax", 
+      "links" : [ 
+        {"title":"Calm", "url" : "http://www.calm.com/"},
+        {"title":"Rainymood", "url" : "http://www.rainymood.com/"},
+        {"title":"Coffitivity", "url" : "https://coffitivity.com/"},
+        {"title":"MyNoise", "url" : "http://mynoise.net/noiseMachines.php"},
+        {"title":"Noisli", "url" : "http://www.noisli.com/"}
+      ]},
+       {
+      "title": "Code Sketches", 
+      "links" : [
+        {"title":"Codepen", "url" : "http://codepen.io/"},
+        {"title":"JsFiddle", "url" : "http://jsfiddle.net/"},
+        {"title":"REPLIt", "url" : "http://repl.it/languages"},
+        {"title":"OpenProcessing", "url" : "http://www.openprocessing.org/"},
+        {"title":"NatureOfCode", "url":"http://natureofcode.com/"}
+      ]},
+       {
+      "title": "Reading", 
+      "links" : [
+        {"title":"Instapaper", "url" : "https://www.instapaper.com/"},
+        {"title":"GetPocket", "url" : "https://getpocket.com/"},
+        {"title":"Flipboard", "url" : "https://flipboard.com/"},
+        {"title":"ZapReader", "url" : "http://www.zapreader.com/"},
+        {"title":"Spreeder", "url":"http://www.spreeder.com/"}
+      ]}],
     "Fun": [
        {
       "title": "Fun Sites", 
@@ -166,12 +275,10 @@ var links = {
         {"title":"Armor Games", "url" : "http://www.armorgames.com"},
         {"title":"Addicting Games", "url":"http://www.addictinggames.com"}
       ]}]
-
-
 }
 
 var topics = {
-  "topics":[{"name":"Top"}, {"name":"Games"}, {"name":"Fun"}]
+  "topics":[{"name":"Top"}, {"name":"Games"}, {"name":"Fun"}, {"name":"Music"}, {"name":"Tools"}]
 }
 
 var loadCell = function(number, entries) {
