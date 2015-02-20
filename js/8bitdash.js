@@ -3,6 +3,7 @@ var pageIndex = 1
 var Dash = function() {
 
   var credits = {
+    "woods.png": "",
     "mockup.gif":"http://bitslap.se/",
     "bitslap.gif":"http://bitslap.se/",
     "asylumgate.gif":"http://bitslap.se/",
@@ -42,6 +43,8 @@ var Dash = function() {
      "snow.gif", 
      "nature.gif",
      "sea.gif"],
+     "woods":
+     ["woods.png"],  
      "other": 
     ["nightcycle.gif", 
     "fireflyreboot.gif", 
@@ -209,7 +212,7 @@ window.onload = function() {
   dat.GUI.toggleHide();
 
   var f1 = gui.addFolder('default');
-  var themes = f1.add(dash, "theme", ["landscapes", "other"]);
+  var themes = f1.add(dash, "theme", ["landscapes", "woods", "other"]);
   var pages = f1.add(dash, "page", ["clock", "map"]);
   f1.open();
 
