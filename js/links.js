@@ -125,16 +125,17 @@ var links = {
       "links" : [ 
         {"title":"HypeM", "url" : "http://hypem.com/"},
         {"title":"Upbeat", "url" : "http://www.upbeatapp.com/"},
-        {"title":"Audiomack", "url" : "http://www.audiomack.com/"}, 
+        {"title":"DropClub", "url" :"http://thedrop.club/"},
         {"title":"Last.fm", "url" : "http://www.last.fm/charts"},
         {"title":"on Twitter","url":"http://hypem.com/twitter/popular"}
       ]},
       {
-      "title": "Hype Vote", 
+      "title": "Discovery", 
       "links" : [
-        {"title":"Upbeat", "url" : "http://www.upbeatapp.com/g/All/hot"},
-        {"title":"DropClub", "url" : "http://thedrop.club/best#play"},
-        {"title":"TasteKid", "url" : "http://www.tastekid.com/music"},
+        {"title":"SpicyMocha", "url" : "https://spicymocha.com/explore/starred_lists"},
+        {"title":"Musicovery", "url" : "http://musicovery.com/"},
+        {"title":"Spotify AE", "url" : "https://artistexplorer.spotify.com/"},
+        {"title":"Gnoosic", "url" : "http://www.gnoosic.com"}, 
         {"title":"TrackGuru", "url" : "http://www.trackguru.co/"}
       ]},
       {
