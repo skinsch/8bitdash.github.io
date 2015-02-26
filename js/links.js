@@ -135,15 +135,15 @@ var links = {
         {"title":"SpicyMocha", "url" : "https://spicymocha.com/explore/starred_lists"},
         {"title":"Musicovery", "url" : "http://musicovery.com/"},
         {"title":"Spotify AE", "url" : "https://artistexplorer.spotify.com/"},
-        {"title":"Gnoosic", "url" : "http://www.gnoosic.com"}, 
-        {"title":"TrackGuru", "url" : "http://www.trackguru.co/"}
+        {"title":"Liveplasma", "url" : "http://www.liveplasma.com"}, 
+        {"title":"MusicMap", "url" : "http://www.music-map.com/"}
       ]},
       {
       "title": "Streaming", 
       "links" : [
         {"title":"Pandora", "url" : "http://www.pandora.com"},
         {"title":"Yahoo! Music", "url" : "http://www.music.yahoo.com"},
-        {"title":"Google Play", "url" : "http://play.google.com`"},
+        {"title":"Google Play", "url" : "http://play.google.com"},
         {"title":"SoundCloud", "url" : "http://www.soundcloud.com"},
         {"title":"Spotify", "url" : "http://www.spotify.com"}
       ]},
