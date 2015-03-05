@@ -54,7 +54,6 @@ var links = {
         {"title":"Twitch", "url" : "http://www.twitch.tv"},
         {"title":"Daily Motion", "url":"http://www.dailymotion.com"}
       ]}],
-
     "Games": [
        {
       "title": "Stores", 
@@ -221,6 +220,59 @@ var links = {
         {"title":"ZapReader", "url" : "http://www.zapreader.com/"},
         {"title":"Spreeder", "url":"http://www.spreeder.com/"}
       ]}],
+      "Movies": [
+       {
+      "title": "Documentaries", 
+      "links" : [ 
+        {"title":"DocumentaryAddict", "url" : "http://documentaryaddict.com/"},
+        {"title":"TopDocuFilms", "url" : "http://topdocumentaryfilms.com/"},
+        {"title":"DocumentaryHeaven", "url" : "http://documentaryheaven.com/"},
+        {"title":"DocumentaryStorm", "url":"http://documentarystorm.com/"},
+        {"title":"on Reddit", "url" : "http://www.reddit.com/r/Documentaries/"}
+      ]},
+      { 
+      "title": "Archives", 
+      "links" : [ 
+        {"title":"archive.org", "url" : "https://archive.org/details/moviesandfilms"},
+        {"title":"NFB", "url" : "https://www.nfb.ca/"},
+        {"title":"spuul", "url" : "https://spuul.com/"},
+        {"title":"watchseries", "url":"http://watchseries.ag"},
+        {"title":"PD movies", "url":"https://www.youtube.com/user/BestPDMovies"}
+      ]},
+             {
+      "title": "Web Video", 
+      "links" : [
+        {"title":"YouTube", "url" : "http://www.youtube.com"},
+        {"title":"NetFlix", "url" : "http://www.netflix.com"},
+        {"title":"Vimeo", "url" : "http://www.vimeo.com"},
+        {"title":"Twitch", "url" : "http://www.twitch.tv"},
+        {"title":"Daily Motion", "url":"http://www.dailymotion.com"}
+      ]},
+      {
+      "title": "You Stream", 
+      "links" : [
+        {"title":"Twitch.tv", "url" : "http://www.twitch.tv"},
+        {"title":"hitbox.tv", "url" : "http://www.hitbox.tv"},
+        {"title":"ustream", "url":"http://www.ustream.tv/"},
+        {"title":"Azubu", "url":"http://www.azubu.tv/"}
+      ]},
+       {
+      "title": "Reviews", 
+      "links" : [
+        {"title":"IMDb", "url" : "http://www.imdb.com/"},
+        {"title":"Metacritic", "url" : "http://www.metacritic.com/movie/"},
+        {"title":"Screenrant", "url" : "http://screenrant.com/"},
+        {"title":"Screendaily", "url" : "http://www.screendaily.com/reviews/"},
+        {"title":"NYTimes", "url":"http://www.nytimes.com/pages/movies/index.html"}
+      ]},
+       {
+      "title": "On Demand", 
+      "links" : [
+        {"title":"Amazon Video", "url" : "http://www.amazon.com/Instant-Video/b/ref=topnav_storetab_atv?_encoding=UTF8&node=2858778011/"},
+        {"title":"Netflix", "url" : "https://www.netflix.com/"},
+        {"title":"Google Play", "url": "https://play.google.com/store/movies"},
+        {"title":"Hulu","url":"http://www.hulu.com/"}
+      ]}],
     "Fun": [
        {
       "title": "Fun Sites", 
@@ -279,7 +331,13 @@ var links = {
 }
 
 var topics = {
-  "topics":[{"name":"Top"}, {"name":"Games"}, {"name":"Fun"}, {"name":"Music"}, {"name":"Tools"}]
+  "topics":[
+    {"name":"Top"}, 
+    {"name":"Games"}, 
+    {"name":"Fun"}, 
+    {"name":"Music"}, 
+    {"name":"Tools"},
+    {"name":"Movies"}]
 }
 
 var loadCell = function(number, entries) {
