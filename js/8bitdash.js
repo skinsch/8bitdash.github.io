@@ -3,6 +3,9 @@ var pageIndex = 1
 var Dash = function() {
 
   var credits = {
+    "wizard.gif" : "Sandy Gorden (@Bandygrass)",
+    "gang.gif" : "Sandy Gorden (@Bandygrass)",
+    "darksouls.gif" : "Sandy Gorden (@Bandygrass)", 
     "woods.png": "",
     "mockup.gif":"http://bitslap.se/",
     "bitslap.gif":"http://bitslap.se/",
@@ -43,6 +46,8 @@ var Dash = function() {
      "snow.gif", 
      "nature.gif",
      "sea.gif"],
+     "bandygrass":
+       ["gang.gif", "darksouls.gif", "wizard.gif"],
      "woods":
      ["woods.png"],  
      "other": 
@@ -212,7 +217,7 @@ window.onload = function() {
   dat.GUI.toggleHide();
 
   var f1 = gui.addFolder('default');
-  var themes = f1.add(dash, "theme", ["landscapes", "woods", "other"]);
+  var themes = f1.add(dash, "theme", ["landscapes", "bandygrass", "woods", "other"]);
   var pages = f1.add(dash, "page", ["clock", "map"]);
   f1.open();
 
