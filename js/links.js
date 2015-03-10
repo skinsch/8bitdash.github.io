@@ -237,7 +237,7 @@ var links = {
         {"title":"NFB", "url" : "https://www.nfb.ca/"},
         {"title":"spuul", "url" : "https://spuul.com/"},
         {"title":"watchseries", "url":"http://watchseries.ag"},
-        {"title":"PD movies", "url":"https://www.youtube.com/user/BestPDMovies"}
+        {"title":"ShortOfTheWeek", "url":"https://www.shortoftheweek.com/"}
       ]},
              {
       "title": "Web Video", 
