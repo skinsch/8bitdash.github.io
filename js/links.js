@@ -254,7 +254,8 @@ var links = {
         {"title":"Twitch.tv", "url" : "http://www.twitch.tv"},
         {"title":"hitbox.tv", "url" : "http://www.hitbox.tv"},
         {"title":"ustream", "url":"http://www.ustream.tv/"},
-        {"title":"Azubu", "url":"http://www.azubu.tv/"}
+        {"title":"Azubu", "url":"http://www.azubu.tv/"},
+        {"title":"LiveCoding","url":"https://www.livecoding.tv/"}
       ]},
        {
       "title": "Reviews", 
