@@ -18,6 +18,7 @@ var Dash = function() {
     "leonard.png":"http://opengameart.org/content/whispers-of-avalon-grassland-tileset",
     "arkanos.png":"http://opengameart.org/content/mage-city-arcanos",
     "dungeon.gif":"http://opengameart.org/content/a-blocky-dungeon",
+    "fire.gif":"Mark Ferrari",
     "swirling.gif":"Mark Ferrari",
     "cave.gif":"Mark Ferrari",
     "underwater.gif":"Mark Ferrari",
@@ -42,7 +43,8 @@ var Dash = function() {
   }
 
   var modes = {"landscapes": 
-    ["town.gif", 
+    ["fire.gif",
+    "town.gif", 
     "bridge.gif",
      "coast.gif",
      "dawn.gif", 
