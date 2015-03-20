@@ -3,6 +3,11 @@ var pageIndex = 1
 var Dash = function() {
 
   var credits = {
+    "megasphere1.gif":"Anton Kudin (@antonkudin)",
+    "megasphere2.gif":"Anton Kudin (@antonkudin)",
+    "megasphere3.gif":"Anton Kudin (@antonkudin)",
+    "megasphere4.gif":"Anton Kudin (@antonkudin)",
+    "megasphere5.gif":"Anton Kudin (@antonkudin)",
     "wizard.gif" : "Sandy Gorden (@Bandygrass)",
     "gang.gif" : "Sandy Gorden (@Bandygrass)",
     "darksouls.gif" : "Sandy Gorden (@Bandygrass)", 
@@ -64,6 +69,12 @@ var Dash = function() {
      "mountain.gif",
      "fortress.gif",
      "rain.gif"],
+     "megasphere":
+       ["megasphere1.gif",
+        "megasphere2.gif", 
+        "megasphere3.gif",
+        "megasphere4.gif",
+        "megasphere5.gif"],
      "bandygrass":
        ["gang.gif", "darksouls.gif", "wizard.gif"],
      "woods":
@@ -235,7 +246,7 @@ window.onload = function() {
   dat.GUI.toggleHide();
 
   var f1 = gui.addFolder('default');
-  var themes = f1.add(dash, "theme", ["landscapes", "bandygrass", "woods", "other"]);
+  var themes = f1.add(dash, "theme", ["landscapes", "megasphere", "bandygrass", "woods", "other"]);
   var pages = f1.add(dash, "page", ["clock", "map"]);
   f1.open();
 
