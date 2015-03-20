@@ -91,8 +91,10 @@ var Dash = function() {
     "leonard.png", 
     "dungeon.gif"]
   }
-  
-  this.curMode = "landscapes";
+ 
+  var startingModes = ["landscapes","megasphere"]
+  var x = Math.random() * startingModes.length;
+  this.curMode = startingModes[Math.floor(x)];
   this.page = "clock"
   this.curIndex = 0;
 
