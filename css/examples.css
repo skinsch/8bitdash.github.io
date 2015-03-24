@@ -113,3 +113,7 @@ abbr,acronym { border: 0;
 .row {
   padding: 2em;
 }
+
+.activated {
+  text-decoration: underline;
+}

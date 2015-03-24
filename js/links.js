@@ -357,6 +357,7 @@ var renderTopics = function() {
   Mustache.parse(template)
   var rendered = Mustache.render(template, topics);
   $("#maptitle").html(rendered);
+
 }
 
 var changeMap = function(topic) {
@@ -364,6 +365,8 @@ var changeMap = function(topic) {
     loadCell(i, links[topic][i]);
     console.log(i, topic, i, links[topic][i]);
   }
+  $(".topic").removeClass("activated");
+  $("#" + topic).addClass("activated");
 }
 
 var initMap = function() {

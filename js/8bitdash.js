@@ -12,6 +12,8 @@ var Dash = function() {
     "gang.gif" : "Sandy Gorden (@Bandygrass)",
     "darksouls.gif" : "Sandy Gorden (@Bandygrass)", 
     "woods.png": "",
+    "orangecyan.png":"jpzk",
+    "redblue.png":"jpzk",
     "mockup.gif":"http://bitslap.se/",
     "bitslap.gif":"http://bitslap.se/",
     "asylumgate.gif":"http://bitslap.se/",
@@ -78,7 +80,9 @@ var Dash = function() {
      "bandygrass":
        ["gang.gif", "darksouls.gif", "wizard.gif"],
      "woods":
-     ["woods.png"],  
+     ["woods.gif"],  
+     "abstract":
+     ["redblue.png", "orangecyan.png"],
      "other": 
     ["nightcycle.gif", 
     "fireflyreboot.gif", 
@@ -94,23 +98,29 @@ var Dash = function() {
  
   var startingModes = ["landscapes","megasphere"]
   var x = Math.random() * startingModes.length;
+  
   this.curMode = startingModes[Math.floor(x)];
+  this.custom = "Insert URL"; 
+  
   this.page = "clock"
   this.curIndex = 0;
 
   // controllable via Dat.GUI
   this.showClock = true;
   this.showGreeter = true;
-  this.username = "";
   this.theme = "landscapes"
+
+  this.changeCSS = function(imageURL) {
+    var rule = document.styleSheets[0].cssRules[0];
+    var postfix = "no-repeat center center fixed";
+    var s = "url(" + imageURL + ") " + postfix;
+    rule.style.background = s 
+    rule.style.backgroundSize = "cover"
+  }
 
   this.changeBackground = function(background) {
     console.log("Changing to " + background);
-    var rule = document.styleSheets[0].cssRules[0];
-    var postfix = "no-repeat center center fixed";
-    var s = "url(images/" + background + ") " + postfix;
-    rule.style.background = s 
-    rule.style.backgroundSize = "cover"
+    this.changeCSS("images/" + background)
   }
 
   this.changeCredit = function(name) {
@@ -156,17 +166,20 @@ var Dash = function() {
       console.log("loaded mode from saved settings")
     }
 
-    if(keys.indexOf("page") != -1) {
-      this.page = basil.get("page")
-      this.changePage(this.page);
-      console.log("loaded page from saved settings")
-    }
-
     // random background
     var x = Math.random() * modes[this.curMode].length;
     this.curIndex = Math.floor(x);
-
     this.updateBackground();
+
+    // override background
+    if(keys.indexOf("customURL") != -1) {
+      this.custom = basil.get("customURL");
+      if(this.custom.startsWith("http")) {
+        this.changeCSS(this.custom);
+        console.log(this.custom);  
+        console.log("loaded custom URL from saved settings")
+      }
+    }
   }
 
   this.changeMode = function(mode) {
@@ -192,8 +205,7 @@ var Dash = function() {
 
 var updateClock = function() {
     var currentTime = new Date();
-  
-    var currentHours = currentTime.getHours ( );
+    var currentHours = currentTime.getHours();
     
     var greeting = ""
     if((0 <= currentHours) && (currentHours < 6)) {
@@ -224,9 +236,7 @@ var updateClock = function() {
     currentHours = ( currentHours == 0 ) ? 12 : currentHours;
   
     var currentTimeString = currentHours + ":" + currentMinutes + " " + timeOfDay;
-  
     document.getElementById("clock").firstChild.nodeValue = currentTimeString;
-
     document.getElementById("greeting").firstChild.nodeValue = greeting 
   }
 
@@ -247,19 +257,27 @@ window.onload = function() {
   var gui = new dat.GUI();
   dat.GUI.toggleHide();
 
-  var f1 = gui.addFolder('default');
-  var themes = f1.add(dash, "theme", ["landscapes", "megasphere", "bandygrass", "woods", "other"]);
-  var pages = f1.add(dash, "page", ["clock", "map"]);
-  f1.open();
+  var defa = gui.addFolder('default');
+  var themes = defa.add(dash, "theme", ["landscapes", "megasphere", "bandygrass", "woods", "other"]);
+  defa.open();
+
+  var customize = gui.addFolder("fixed custom URL");
+  var customURL = customize.add(dash, "custom");
+  customize.open();
 
   themes.onChange(function(value) {
     dash.changeMode(value);
     alertify.log("Saved settings")
   })
 
-  pages.onChange(function(value) {
-    dash.changePage(value);
-    alertify.log("Saved settings")
+  customURL.onChange(function(value) {
+    if(value.startsWith("http")) {
+      dash.changeCSS(value)
+      basil.set("customURL", value);
+    } else {
+      basil.set("customURL", "");
+      dash.updateBackground();
+    }
   })
 
   if(basil.keys().indexOf('done-tutorial') == -1) {
@@ -320,6 +338,5 @@ window.onload = function() {
   });
 
   initMap();
-
 }
 

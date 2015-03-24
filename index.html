@@ -67,7 +67,7 @@
           <div id="maptitle"></div>
           <script id="topicTemplate" type="x-tmpl-mustache">
             {{#topics}}
-               <a href="#" onClick="changeMap('{{name}}')">{{name}}</a>&nbsp;&nbsp;&nbsp;
+               <a href="#" class="topic" id="{{name}}" onClick="changeMap('{{name}}')">{{name}}</a>&nbsp;&nbsp;&nbsp;
             {{/topics}}
           </script>
         </div>
