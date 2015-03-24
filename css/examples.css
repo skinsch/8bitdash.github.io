@@ -70,6 +70,10 @@ abbr,acronym { border: 0;
     text-align: center;
 }
 
+#mapfooter a{
+  color: #333;
+}
+
 #center {
   width: 640px;
   height: 100px;
