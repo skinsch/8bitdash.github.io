@@ -170,7 +170,7 @@ var links = {
       "title": "Documents", 
       "links" : [ 
         {"title": "Google Docs", "url" : "http://docs.google.com/"},
-        {"title":"Word Online", "url" : "https://office.live.com/start/Word.aspx"},
+        {"title":"fiddle.md", "url" : "https://fiddle.md"},
         {"title":"Draftin", "url" : "http://www.draftin.com"},
         {"title":"Dillinger", "url": "http://dillinger.io/"},
         {"title":"Etherpad", "url" : "https://beta.etherpad.org/"}
