@@ -2,50 +2,58 @@ var pageIndex = 1
 
 var Dash = function() {
 
+  var cr_hld = "<a target=\"_blank\" href=\"http://www.heart-machine.com/\">heart-machine.com</a>"+ 
+    "+ <a target=\"_blank\" href=\"http://www.twitter.com/heartmachinez\">@HeartMachineZ</a>"
+  var cr_ms = "<a target=\"_blank\" href=\"http://www.antonkudin.me/megasphere/\">Megasphere</a>"+
+    " by Anton Kudin (<a href=\"http://www.twitter.com/antonkudin\">@antonkudin</a>)"
+  var cr_bs = "<a target=\"_blank\" href=\"http://bitslap.se/\">bitslap.se</a>"
+  var cr_sg = "Sandy Gorden (<a target=\"_blank\" href=\"http://www.twitter.com/bandygrass\">@Bandygrass</a>)"
+  var cr_mf = "Mark Ferrari"
+  
   var credits = {
-    "megasphere1.gif":"Anton Kudin (@antonkudin)",
-    "megasphere2.gif":"Anton Kudin (@antonkudin)",
-    "megasphere3.gif":"Anton Kudin (@antonkudin)",
-    "megasphere4.gif":"Anton Kudin (@antonkudin)",
-    "megasphere5.gif":"Anton Kudin (@antonkudin)",
-    "wizard.gif" : "Sandy Gorden (@Bandygrass)",
-    "gang.gif" : "Sandy Gorden (@Bandygrass)",
-    "darksouls.gif" : "Sandy Gorden (@Bandygrass)", 
+    "hyperlight.gif": cr_hld,
+    "hyperlight2.gif": cr_hld, 
+    "megasphere1.gif": cr_ms,
+    "megasphere2.gif": cr_ms,
+    "megasphere3.gif": cr_ms,
+    "megasphere4.gif": cr_ms,
+    "megasphere5.gif": cr_ms,
+    "wizard.gif" : cr_sg,
+    "gang.gif" : cr_sg,
+    "darksouls.gif" : cr_sg, 
     "woods.png": "",
-    "orangecyan.png":"jpzk",
-    "redblue.png":"jpzk",
-    "mockup.gif":"http://bitslap.se/",
-    "bitslap.gif":"http://bitslap.se/",
-    "asylumgate.gif":"http://bitslap.se/",
-    "nightcycle.gif":"http://bitslap.se/",
-    "fireflyreboot.gif":"http://bitslap.se/",
+    "mockup.gif": cr_bs,
+    "bitslap.gif": cr_bs,
+    "asylumgate.gif": cr_bs,
+    "nightcycle.gif": cr_bs, 
+    "fireflyreboot.gif": cr_bs,
     "town.png":"http://www.serebiiforums.com/showthread.php?379701-Another-Sprite-Showcase",
     "ironberg.png":"http://www.serebiiforums.com/showthread.php?379701-Another-Sprite-Showcase",
     "forrest.png":"http://www.serebiiforums.com/showthread.php?379701-Another-Sprite-Showcase",
     "leonard.png":"http://opengameart.org/content/whispers-of-avalon-grassland-tileset",
     "arkanos.png":"http://opengameart.org/content/mage-city-arcanos",
     "dungeon.gif":"http://opengameart.org/content/a-blocky-dungeon",
-    "fire.gif":"Mark Ferrari",
-    "swirling.gif":"Mark Ferrari",
-    "cave.gif":"Mark Ferrari",
-    "underwater.gif":"Mark Ferrari",
-    "swamp.gif":"Mark Ferrari",
-    "mountain.gif":"Mark Ferrari",
-    "fortress.gif":"Mark Ferrari",
-    "rain.gif":"Mark Ferrari",
-    "town.gif":"Mark Ferrari",
-    "bridge.gif":"Mark Ferrari",
-    "falls.gif":"Mark Ferrari",
-    "coast.gif":"Mark Ferrari",
-    "dawn.gif":"Mark Ferrari",
-    "northlights.gif":"Mark Ferrari",
-    "lake.gif":"Mark Ferrari",
-    "snow.gif":"Mark Ferrari",
-    "bridge_raining.gif":"Mark Ferrari",
-    "nature.gif": "Mark Ferrari",
-    "castle.gif": "Mark Ferrari",
-    "grandcanyon.gif": "Mark Ferrari",
-    "sea.gif": "Mark Ferrari",
+    "fire.gif":cr_mf,
+    "swirling.gif":cr_mf,
+    "cave.gif":cr_mf,
+    "underwater.gif":cr_mf,
+    "swamp.gif":cr_mf,
+    "mountain.gif":cr_mf,
+    "fortress.gif":cr_mf,
+    "rain.gif":cr_mf,
+    "town.gif":cr_mf,
+    "bridge.gif":cr_mf,
+    "falls.gif":cr_mf,
+    "coast.gif":cr_mf,
+    "dawn.gif":cr_mf,
+    "northlights.gif":cr_mf,
+    "lake.gif":cr_mf,
+    "snow.gif":cr_mf,
+    "bridge_raining.gif":cr_mf,
+    "nature.gif": cr_mf,
+    "castle.gif": cr_mf,
+    "grandcanyon.gif": cr_mf,
+    "sea.gif": cr_mf,
     "cyber.gif": "http://flexroman.tumblr.com/"
   }
 
@@ -71,6 +79,9 @@ var Dash = function() {
      "mountain.gif",
      "fortress.gif",
      "rain.gif"],
+     "hyperlightdrifter":
+       ["hyperlight.gif",
+        "hyperlight2.gif"],
      "megasphere":
        ["megasphere1.gif",
         "megasphere2.gif", 
@@ -80,9 +91,7 @@ var Dash = function() {
      "bandygrass":
        ["gang.gif", "darksouls.gif", "wizard.gif"],
      "woods":
-     ["woods.gif"],  
-     "abstract":
-     ["redblue.png", "orangecyan.png"],
+     ["woods.png"],  
      "other": 
     ["nightcycle.gif", 
     "fireflyreboot.gif", 
@@ -95,8 +104,8 @@ var Dash = function() {
     "leonard.png", 
     "dungeon.gif"]
   }
- 
-  var startingModes = ["landscapes","megasphere"]
+
+  var startingModes = ["landscapes", "bandygrass", "hyperlightdrifter", "megasphere"]
   var x = Math.random() * startingModes.length;
   
   this.curMode = startingModes[Math.floor(x)];
@@ -126,7 +135,7 @@ var Dash = function() {
   this.changeCredit = function(name) {
     console.log("Changing credit to " + name);
     var s = name;
-    document.getElementById("footer").firstChild.nodeValue = s; 
+    document.getElementById("footer").innerHTML = s; 
   }
 
   this.updateBackground = function() {
@@ -258,7 +267,9 @@ window.onload = function() {
   dat.GUI.toggleHide();
 
   var defa = gui.addFolder('default');
-  var themes = defa.add(dash, "theme", ["landscapes", "megasphere", "bandygrass", "woods", "other"]);
+  var themes = ["landscapes", "hyperlightdrifter",
+      "megasphere", "bandygrass", "woods", "other"];
+  var themes = defa.add(dash, "theme", themes);
   defa.open();
 
   var customize = gui.addFolder("fixed custom URL");

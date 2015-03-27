@@ -74,6 +74,10 @@ abbr,acronym { border: 0;
   color: #333;
 }
 
+#footer a{
+  color: #fff;
+}
+
 #center {
   width: 640px;
   height: 100px;
