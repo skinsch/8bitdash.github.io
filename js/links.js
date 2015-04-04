@@ -220,6 +220,59 @@ var links = {
         {"title":"ZapReader", "url" : "http://www.zapreader.com/"},
         {"title":"Spreeder", "url":"http://www.spreeder.com/"}
       ]}],
+      "Travel": [
+       {
+      "title": "Maps", 
+      "links" : [ 
+        {"title":"Google Maps", "url" : "https://maps.google.com/"},
+        {"title":"OpenStreetMap", "url" : "http://www.openstreetmap.org/"},
+        {"title":"OpenTopoMap", "url" : "http://opentopomap.org/"},
+        {"title":"OpenMaps.eu", "url":"http://openmaps.eu/"},
+        {"title":"OpenCycleMap", "url" : "http://www.opencyclemap.org"}
+      ]},
+      { 
+      "title": "Nomad", 
+      "links" : [ 
+        {"title":"NomadList", "url" : "http://www.nomadlist.com"},
+        {"title":"Nomadler", "url" : "http://www.nomadler.com"},
+        {"title":"WorkFrom", "url" : "https://workfrom.co"},
+        {"title":"AirBnB", "url" : "https://www.airbnb.com/"},
+        {"title":"on Reddit", "url" : "http://www.reddit.com/r/telecommuting/"},
+      ]},
+      {
+      "title": "Stories", 
+      "links" : [
+        {"title":"Maptia", "url" : "http://www.maptia.com"},
+        {"title":"Travelistly", "url" : "http://www.travelistly.com/tv"},
+        {"title":"Medium", "url" : "https://medium.com/on-travel"},
+        {"title":"Tumblr", "url" : "http://www.tumblr.com/search/travel"},
+        {"title":"Fathoma", "url" : "http://fathomaway.com"}
+      ]},
+      {
+      "title": "Info", 
+      "links" : [
+        {"title":"Wikivoyage", "url" : "http://www.wikivoyage.org/"},
+        {"title":"Lonely Planet", "url":"http://www.lonelyplanet.com/"},
+        {"title":"Rough Guides", "url":"http://www.roughguides.com"},
+        {"title":"TravelScope", "url":"http://www.markuslerner.com/travelscope/"},
+        {"title":"On Reddit", "url":"http://www.reddit.com/r/travel"}
+      ]},
+       {
+      "title": "Booking", 
+      "links" : [
+        {"title":"Booking.com", "url" : "http://www.booking.com/"},
+        {"title":"HostelWorld", "url" : "http://www.hostelworld.com"},
+        {"title":"HostelBookers", "url" : "http://www.hostelbookers.com"},
+        {"title":"LastMinute", "url" : "http://www.lastminute.com"},
+      ]},
+       {
+      "title": "Reviews", 
+      "links" : [
+        {"title":"Tripadvisor", "url" : "http://www.tripadvisor.com"},
+        {"title":"SpottedByLocals", "url" : "http://www.spottedbylocals.com"},
+        {"title":"Lonely Planet", "url":"http://www.lonelyplanet.com/"},
+        {"title":"Nuu.in", "url":"https://nuu.in/"}
+      ]}],
       "Movies": [
        {
       "title": "Documentaries", 
@@ -338,7 +391,8 @@ var topics = {
     {"name":"Fun"}, 
     {"name":"Music"}, 
     {"name":"Tools"},
-    {"name":"Movies"}]
+    {"name":"Movies"},
+    {"name":"Travel"}]
 }
 
 var loadCell = function(number, entries) {
