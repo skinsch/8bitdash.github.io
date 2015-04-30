@@ -9,8 +9,11 @@ var Dash = function() {
   var cr_bs = "<a target=\"_blank\" href=\"http://bitslap.se/\">bitslap.se</a>"
   var cr_sg = "Sandy Gorden (<a target=\"_blank\" href=\"http://www.twitter.com/bandygrass\">@Bandygrass</a>)"
   var cr_mf = "Mark Ferrari"
-  
+  var cr_rw = "Rain World (<a target=\"_blank\" href=\"http://store.steampowered.com/app/312520/\">Steam</a>, <a target=\"_blank\" href=\"https://twitter.com/RainWorldGame\">Twitter</a>)"
   var credits = {
+    "moving.gif": cr_rw,
+    "pups_fixed.gif": cr_rw,
+    "sticks_and_stones.gif": cr_rw,
     "hyperlight.gif": cr_hld,
     "hyperlight2.gif": cr_hld, 
     "megasphere1.gif": cr_ms,
@@ -79,6 +82,10 @@ var Dash = function() {
      "mountain.gif",
      "fortress.gif",
      "rain.gif"],
+     "rainworld":
+       ["moving.gif",
+        "pups_fixed.gif",
+        "sticks_and_stones.gif"],
      "hyperlightdrifter":
        ["hyperlight.gif",
         "hyperlight2.gif"],
@@ -105,7 +112,7 @@ var Dash = function() {
     "dungeon.gif"]
   }
 
-  var startingModes = ["landscapes", "bandygrass", "hyperlightdrifter", "megasphere"]
+  var startingModes = ["landscapes", "rainworld", "bandygrass", "hyperlightdrifter", "megasphere"]
   var x = Math.random() * startingModes.length;
   
   this.curMode = startingModes[Math.floor(x)];
@@ -267,7 +274,7 @@ window.onload = function() {
   dat.GUI.toggleHide();
 
   var defa = gui.addFolder('default');
-  var themes = ["landscapes", "hyperlightdrifter",
+  var themes = ["landscapes", "rainworld", "hyperlightdrifter",
       "megasphere", "bandygrass", "woods", "other"];
   var themes = defa.add(dash, "theme", themes);
   defa.open();
