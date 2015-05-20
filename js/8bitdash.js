@@ -8,9 +8,15 @@ var Dash = function() {
     " by Anton Kudin (<a href=\"http://www.twitter.com/antonkudin\">@antonkudin</a>)"
   var cr_bs = "<a target=\"_blank\" href=\"http://bitslap.se/\">bitslap.se</a>"
   var cr_sg = "Sandy Gorden (<a target=\"_blank\" href=\"http://www.twitter.com/bandygrass\">@Bandygrass</a>)"
+  var cr_ls = "<a target=\"_blank\" href=\"http://lennsan.tumblr.com/\">http://lennsan.tumblr.com</a>"
   var cr_mf = "Mark Ferrari"
   var cr_rw = "Rain World (<a target=\"_blank\" href=\"http://store.steampowered.com/app/312520/\">Steam</a>, <a target=\"_blank\" href=\"https://twitter.com/RainWorldGame\">Twitter</a>)"
   var credits = {
+    "first.png": cr_ls,
+    "second.png": cr_ls,
+    "third.png": cr_ls,
+    "fourth.gif": cr_ls,
+    "fifth.gif": cr_ls,
     "moving.gif": cr_rw,
     "pups_fixed.gif": cr_rw,
     "sticks_and_stones.gif": cr_rw,
@@ -82,6 +88,9 @@ var Dash = function() {
      "mountain.gif",
      "fortress.gif",
      "rain.gif"],
+     "lennsan": ["first.png",
+      "second.png", "third.png",
+      "fourth.gif", "fifth.gif"],
      "rainworld":
        ["moving.gif",
         "pups_fixed.gif",
@@ -112,7 +121,8 @@ var Dash = function() {
     "dungeon.gif"]
   }
 
-  var startingModes = ["landscapes", "rainworld", "bandygrass", "hyperlightdrifter", "megasphere"]
+  var startingModes = ["landscapes", "lennsan", "rainworld", 
+      "bandygrass", "hyperlightdrifter", "megasphere"]
   var x = Math.random() * startingModes.length;
   
   this.curMode = startingModes[Math.floor(x)];
@@ -274,7 +284,7 @@ window.onload = function() {
   dat.GUI.toggleHide();
 
   var defa = gui.addFolder('default');
-  var themes = ["landscapes", "rainworld", "hyperlightdrifter",
+  var themes = ["landscapes", "lennsan", "rainworld", "hyperlightdrifter",
       "megasphere", "bandygrass", "woods", "other"];
   var themes = defa.add(dash, "theme", themes);
   defa.open();
