@@ -12,6 +12,7 @@ var Dash = function() {
   var cr_mf = "Mark Ferrari"
   var cr_rw = "Rain World (<a target=\"_blank\" href=\"http://store.steampowered.com/app/312520/\">Steam</a>, <a target=\"_blank\" href=\"https://twitter.com/RainWorldGame\">Twitter</a>)"
   var credits = {
+    "barfly.gif": "Longshot", 
     "first.png": cr_ls,
     "second.png": cr_ls,
     "third.png": cr_ls,
@@ -109,7 +110,8 @@ var Dash = function() {
      "woods":
      ["woods.png"],  
      "other": 
-    ["nightcycle.gif", 
+    ["barfly.gif",
+    "nightcycle.gif", 
     "fireflyreboot.gif", 
     "mockup.gif", 
     "asylumgate.gif", 
