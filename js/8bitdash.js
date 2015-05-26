@@ -10,8 +10,20 @@ var Dash = function() {
   var cr_sg = "Sandy Gorden (<a target=\"_blank\" href=\"http://www.twitter.com/bandygrass\">@Bandygrass</a>)"
   var cr_ls = "<a target=\"_blank\" href=\"http://lennsan.tumblr.com/\">http://lennsan.tumblr.com</a>"
   var cr_mf = "Mark Ferrari"
+  var cr_vb = "valenberg.com"
   var cr_rw = "Rain World (<a target=\"_blank\" href=\"http://store.steampowered.com/app/312520/\">Steam</a>, <a target=\"_blank\" href=\"https://twitter.com/RainWorldGame\">Twitter</a>)"
+
   var credits = {
+    "bicycle.gif": cr_vb,
+    "blade.gif": cr_vb,
+    "daftpunk.gif": cr_vb,
+    "exodus.gif": cr_vb,
+    "future.gif": cr_vb,
+    "moon.png": cr_vb,
+    "redbicycle.gif": cr_vb,
+    "skate.gif": cr_vb,
+    "streets.gif": cr_vb,
+    "tv.gif": cr_vb,
     "barfly.gif": "Longshot", 
     "first.png": cr_ls,
     "second.png": cr_ls,
@@ -89,6 +101,17 @@ var Dash = function() {
      "mountain.gif",
      "fortress.gif",
      "rain.gif"],
+     "valenberg": [
+    "bicycle.gif",
+    "blade.gif",
+    "daftpunk.gif",
+    "exodus.gif",
+    "future.gif",
+    "moon.png",
+    "redbicycle.gif",
+    "skate.gif",
+    "streets.gif",
+    "tv.gif"],
      "lennsan": ["first.png",
       "second.png", "third.png",
       "fourth.gif", "fifth.gif"],
@@ -123,8 +146,9 @@ var Dash = function() {
     "dungeon.gif"]
   }
 
-  var startingModes = ["landscapes", "lennsan", "rainworld", 
-      "bandygrass", "hyperlightdrifter", "megasphere"]
+  var startingModes = ["landscapes", "valenberg",
+      "lennsan", "rainworld", "bandygrass", 
+      "hyperlightdrifter", "megasphere"]
   var x = Math.random() * startingModes.length;
   
   this.curMode = startingModes[Math.floor(x)];
@@ -286,7 +310,8 @@ window.onload = function() {
   dat.GUI.toggleHide();
 
   var defa = gui.addFolder('default');
-  var themes = ["landscapes", "lennsan", "rainworld", "hyperlightdrifter",
+  var themes = ["landscapes", "valenberg", "lennsan", 
+      "rainworld", "hyperlightdrifter",
       "megasphere", "bandygrass", "woods", "other"];
   var themes = defa.add(dash, "theme", themes);
   defa.open();
