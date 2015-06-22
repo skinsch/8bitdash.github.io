@@ -294,6 +294,8 @@ var updateClock = function() {
 
 window.onload = function() {
 
+  alertify.log("New: <a href=\"http://www.reddit.com/r/InternetIsBeautiful/comments/3aow9i/diary_dash_write_something_everyday_stored_in/\">diarydash.com</a>",0)
+
   $('#fullpage').fullpage({
      resize: false,
      css3: true,
