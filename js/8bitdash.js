@@ -360,6 +360,9 @@ window.onload = function() {
   Mousetrap.bind("y", function() {
     window.location.href = "https://www.youtube.com"
   });
+  Mousetrap.bind("u", function() {
+    window.location.href = "https://www.duckduckgo.com"
+  });
   Mousetrap.bind("m", function() {
     window.location.href = "https://maps.google.com"
   });
