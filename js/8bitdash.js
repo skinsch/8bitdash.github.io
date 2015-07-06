@@ -12,8 +12,10 @@ var Dash = function() {
   var cr_mf = "Mark Ferrari"
   var cr_vb = "<a target=\"_blank\" href=\"http://www.valenberg.com/\">valenberg.com</a>"
   var cr_rw = "Rain World (<a target=\"_blank\" href=\"http://store.steampowered.com/app/312520/\">Steam</a>, <a target=\"_blank\" href=\"https://twitter.com/RainWorldGame\">Twitter</a>)"
+  var cr_bp = "JayTKnox (<a target=\"_blank\" href=\"http://jayknoxart.tumblr.com\">jayknoxart.tumblr.com</a>, <a target=\"_blank\" href=\"https://twitter.com/JayTKnox\">@JayTKnox</a>)"
 
   var credits = {
+    "bebop.gif": cr_bp,
     "bicycle.gif": cr_vb,
     "blade.gif": cr_vb,
     "daftpunk.gif": cr_vb,
@@ -132,6 +134,7 @@ var Dash = function() {
        ["gang.gif", "darksouls.gif", "wizard.gif"],
      "woods":
      ["woods.png"],  
+     "movies":["bebop.gif"],
      "other": 
     ["barfly.gif",
     "nightcycle.gif", 
@@ -148,7 +151,7 @@ var Dash = function() {
 
   var startingModes = ["landscapes", "valenberg",
       "lennsan", "rainworld", "bandygrass", 
-      "hyperlightdrifter", "megasphere"]
+      "hyperlightdrifter", "megasphere", "movies"]
   var x = Math.random() * startingModes.length;
   
   this.curMode = startingModes[Math.floor(x)];
@@ -312,7 +315,7 @@ window.onload = function() {
   var defa = gui.addFolder('default');
   var themes = ["landscapes", "valenberg", "lennsan", 
       "rainworld", "hyperlightdrifter",
-      "megasphere", "bandygrass", "woods", "other"];
+      "megasphere", "bandygrass", "woods", "movies", "other"];
   var themes = defa.add(dash, "theme", themes);
   defa.open();
 
