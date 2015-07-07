@@ -382,9 +382,6 @@ window.onload = function() {
   Mousetrap.bind("d", function() {
     window.location.href = "https://www.digg.com"
   });
-  Mousetrap.bind("d", function() {
-    window.location.href = "https://www.digg.com"
-  });
   Mousetrap.bind("e", function() {
     window.location.href = "https://www.ebay.com"
   });
