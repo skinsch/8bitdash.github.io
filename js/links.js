@@ -32,7 +32,7 @@ var links = {
       "links" : [ 
         {"title":"Pandora", "url" : "http://www.pandora.com"},
         {"title":"Yahoo! Music", "url" : "http://www.music.yahoo.com"},
-        {"title":"Google Play", "url" : "http://play.google.com`"},
+        {"title":"Google Play", "url" : "http://play.google.com"},
         {"title":"SoundCloud", "url" : "http://www.soundcloud.com"},
         {"title":"Spotify", "url" : "http://www.spotify.com"}
       ]},
