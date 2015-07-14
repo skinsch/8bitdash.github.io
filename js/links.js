@@ -31,7 +31,7 @@ var links = {
       "title": "Music", 
       "links" : [ 
         {"title":"Pandora", "url" : "http://www.pandora.com"},
-        {"title":"Yahoo! Music", "url" : "http://www.music.yahoo.com"},
+        {"title":"Rdio", "url" : "http://www.rdio.com/"},
         {"title":"Google Play", "url" : "http://play.google.com"},
         {"title":"SoundCloud", "url" : "http://www.soundcloud.com"},
         {"title":"Spotify", "url" : "http://www.spotify.com"}
