@@ -113,7 +113,7 @@ var links = {
        {
       "title": "Underground", 
       "links" : [ 
-        {"title": "SOUNDTST", "url" : "http://www.soundtst.com"},
+        {"title": "SNDTST", "url" : "http://www.sndtst.com"},
         {"title":"CmdFM", "url" : "https://cmd.fm"},
         {"title":"SomaFM", "url" : "http://somafm.com/"},
         {"title":"Cratestream", "url": "http://www.cratestream.com/listen/"},
