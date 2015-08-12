@@ -13,6 +13,7 @@ var Dash = function() {
   var cr_vb = "<a target=\"_blank\" href=\"http://www.valenberg.com/\">valenberg.com</a>"
   var cr_rw = "Rain World (<a target=\"_blank\" href=\"http://store.steampowered.com/app/312520/\">Steam</a>, <a target=\"_blank\" href=\"https://twitter.com/RainWorldGame\">Twitter</a>)"
   var cr_bp = "JayTKnox (<a target=\"_blank\" href=\"http://jayknoxart.tumblr.com\">jayknoxart.tumblr.com</a>, <a target=\"_blank\" href=\"https://twitter.com/JayTKnox\">@JayTKnox</a>)"
+  var cr_itr = "<a target=\"_blank\" href=\"http://www.facebook.com/intotherift\">Into The Rift</a>"
 
   var credits = {
     "bebop.gif": cr_bp,
@@ -78,7 +79,10 @@ var Dash = function() {
     "castle.gif": cr_mf,
     "grandcanyon.gif": cr_mf,
     "sea.gif": cr_mf,
-    "cyber.gif": "http://flexroman.tumblr.com/"
+    "cyber.gif": "http://flexroman.tumblr.com/",
+    "intotherift.gif": cr_itr,
+    "intotherift2.gif": cr_itr,
+    "intotherift3.gif": cr_itr
   }
 
   var modes = {"landscapes": 
@@ -114,6 +118,9 @@ var Dash = function() {
     "skate.gif",
     "streets.gif",
     "tv.gif"],
+    "intotherift":["intotherift.gif",
+    "intotherift2.gif",
+    "intotherift3.gif"],
      "lennsan": ["first.png",
       "second.png", "third.png",
       "fourth.gif", "fifth.gif"],
@@ -149,7 +156,7 @@ var Dash = function() {
     "dungeon.gif"]
   }
 
-  var startingModes = ["landscapes", "valenberg",
+  var startingModes = ["landscapes", "intotherift", "valenberg",
       "lennsan", "rainworld", "bandygrass", 
       "hyperlightdrifter", "megasphere", "movies"]
   var x = Math.random() * startingModes.length;
@@ -313,7 +320,7 @@ window.onload = function() {
   dat.GUI.toggleHide();
 
   var defa = gui.addFolder('default');
-  var themes = ["landscapes", "valenberg", "lennsan", 
+  var themes = ["landscapes", "valenberg", "intotherift", "lennsan", 
       "rainworld", "hyperlightdrifter",
       "megasphere", "bandygrass", "woods", "movies", "other"];
   var themes = defa.add(dash, "theme", themes);
