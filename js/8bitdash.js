@@ -1,5 +1,65 @@
 var pageIndex = 1
-
+var LANG = "english";
+var goodMorning = {
+	"english":"Good Morning",
+	"spanish":"Buenos Días",
+	"russian":"Доброе утро",
+	"french":"Bonjour",
+	"mandarin":"早上好",
+	"japanese":"おはよう",
+	"arabic":"صباح الخير",
+	"hindi":"सुप्रभात",
+	"korean":"좋은 아침",
+	"italian":"Buongiorno",
+}
+var goodNight = {
+	"english":"Good Night",
+	"spanish":"Buenos Noches",
+	"russian":"Доброй ночи",
+	"french":"Bonne Nuit",
+	"mandarin":"晚安",
+	"japanese":"おやすみ",
+	"arabic":"تصبح على خير",
+	"hindi":"शुभ रात्रि",
+	"korean":"안녕히 주무세요",
+	"italian":"Buona Notte",
+}
+var goodAfternoon = {
+	"english":"Good Afternoon",
+	"spanish":"Buenos Tardes",
+	"russian":"Добрый день",
+	"french":"Bon Après-midi",
+	"mandarin":"下午好",
+	"japanese":"こんにちは",
+	"arabic":"مساء الخير",
+	"hindi":"नमस्कार",
+	"korean":"안녕하세요",
+	"italian":"Buon Pomeriggio",
+}
+var goodEvening = {
+	"english":"Good Evening",
+	"spanish":"Buenos Noches",
+	"russian":"добрый вечер",
+	"french":"Bonne Soirée",
+	"mandarin":"晚上好",
+	"japanese":"こんばんは",
+	"arabic":"مساء الخير",
+	"hindi":"गुड इवनिंग",
+	"korean":"안녕하세요",
+	"italian":"Buona Sera",
+}
+var sleepWell = {
+	"english":"Good Morning",
+	"spanish":"Duerma Bien",
+	"russian":"Спать хорошо",
+	"french":"Dormez Bien",
+	"mandarin":"睡得好",
+	"japanese":"よく眠る",
+	"arabic":"نم جيدا",
+	"hindi":"अच्छे से सो",
+	"korean":"숙면",
+	"italian":"Dormi Bene",
+}
 var Dash = function() {
 
   var cr_hld = "<a target=\"_blank\" href=\"http://www.heart-machine.com/\">heart-machine.com</a>"+ 
@@ -14,7 +74,7 @@ var Dash = function() {
   var cr_rw = "Rain World (<a target=\"_blank\" href=\"http://store.steampowered.com/app/312520/\">Steam</a>, <a target=\"_blank\" href=\"https://twitter.com/RainWorldGame\">Twitter</a>)"
   var cr_bp = "JayTKnox (<a target=\"_blank\" href=\"http://jayknoxart.tumblr.com\">jayknoxart.tumblr.com</a>, <a target=\"_blank\" href=\"https://twitter.com/JayTKnox\">@JayTKnox</a>)"
   var cr_itr = "<a target=\"_blank\" href=\"http://www.facebook.com/intotherift\">Into The Rift</a>"
-
+  
   var credits = {
     "bebop.gif": cr_bp,
     "bicycle.gif": cr_vb,
@@ -171,7 +231,13 @@ var Dash = function() {
   this.showClock = true;
   this.showGreeter = true;
   this.theme = "landscapes"
+  this.language = "english"
 
+  this.changeLanguage = function(language) {
+	  LANG = this.language;
+	  updateClock();
+  }
+  
   this.changeCSS = function(imageURL) {
     var rule = document.styleSheets[0].cssRules[0];
     var postfix = "no-repeat center center fixed";
@@ -271,20 +337,20 @@ var updateClock = function() {
     
     var greeting = ""
     if((0 <= currentHours) && (currentHours < 6)) {
-      greeting = "Good Night"
+		greeting = goodNight[LANG];
     }
     if((6 <= currentHours) && (currentHours < 12)) {
-      greeting = "Good Morning"
+		greeting = goodMorning[LANG];
     }
     if((12 <= currentHours) && (currentHours < 18)) {
-      greeting = "Good Afternoon"
+		greeting = goodAfternoon[LANG];	
     }
     if((18 <= currentHours) && (currentHours < 22)) {
-      greeting = "Good Evening"
+		greeting = goodEvening[LANG];
     }
     if((22 <= currentHours) && (currentHours < 24)) {
-      greeting = "Sleep Well"
-    }
+		greeting = sleepWell[LANG];    
+	}
     
     var currentMinutes = currentTime.getMinutes ( );
     var currentSeconds = currentTime.getSeconds ( );
@@ -320,6 +386,9 @@ window.onload = function() {
   dat.GUI.toggleHide();
 
   var defa = gui.addFolder('default');
+  var languages = ["english", "spanish", "russian", "french", 
+  "mandarin", "japanese", "arabic", "hindi", "korean", "italian"];
+  var languages = defa.add(dash, "language", languages);
   var themes = ["landscapes", "valenberg", "intotherift", "lennsan", 
       "rainworld", "hyperlightdrifter",
       "megasphere", "bandygrass", "woods", "movies", "other"];
@@ -329,6 +398,12 @@ window.onload = function() {
   var customize = gui.addFolder("fixed custom URL");
   var customURL = customize.add(dash, "custom");
   customize.open();
+  
+  languages.onChange(function(value) {
+	  dash.changeLanguage(value);
+	  alertify.log("Language set to:" + LANG);
+	  alertify.log("Saved settings")
+  })
 
   themes.onChange(function(value) {
     dash.changeMode(value);
