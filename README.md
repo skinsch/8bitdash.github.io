@@ -14,8 +14,8 @@ Scroll down, or press arrow down to swipe to the navigation part of the site. In
 
 ## Contributors
 
-* Jendrik Poloczek 
-* José Luis Bonilla
+* Jendrik Poloczek (Idea, programming and artist relations)
+* José Luis Bonilla (Language feature)
 
 ## Pixel Artists
 
