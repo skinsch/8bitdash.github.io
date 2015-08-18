@@ -10,7 +10,7 @@
 
 Scroll down, or press arrow down to swipe to the navigation part of the site. In the catalog you will find useful sites and interesting sites to start your day.
 
-![Alt](http://i.imgur.com/vkWxM0M.png?1)
+![Alt](http://i.imgur.com/wcOgXwL.png?1)
 
 ## Contributors
 
