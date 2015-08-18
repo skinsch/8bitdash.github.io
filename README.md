@@ -14,8 +14,8 @@ Scroll down, or press arrow down to swipe to the navigation part of the site. In
 
 ## Contributors
 
-* Jendrik Poloczek @madewithtea (Idea, programming and artist relations)
-* José Luis Bonilla @DJBlayOfficial (Language feature)
+* Jendrik Poloczek [@madewithtea](https://twitter.com/madewithtea) (Idea, programming and artist relations)
+* José Luis Bonilla [@DJBlayOfficial](https://twitter.com/DJBlayOfficial) (Language feature)
 
 ## Pixel Artists
 
