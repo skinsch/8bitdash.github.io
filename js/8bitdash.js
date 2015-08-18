@@ -2,6 +2,7 @@ var pageIndex = 1
 var LANG = "english";
 var goodMorning = {
 	"english":"Good Morning",
+    "german":"Guten Morgen",
 	"spanish":"Buenos Días",
 	"russian":"Доброе утро",
 	"french":"Bonjour",
@@ -14,6 +15,7 @@ var goodMorning = {
 }
 var goodNight = {
 	"english":"Good Night",
+    "german":"Gute Nacht",
 	"spanish":"Buenos Noches",
 	"russian":"Доброй ночи",
 	"french":"Bonne Nuit",
@@ -26,6 +28,7 @@ var goodNight = {
 }
 var goodAfternoon = {
 	"english":"Good Afternoon",
+    "german":"Guten Tag",
 	"spanish":"Buenos Tardes",
 	"russian":"Добрый день",
 	"french":"Bon Après-midi",
@@ -38,6 +41,7 @@ var goodAfternoon = {
 }
 var goodEvening = {
 	"english":"Good Evening",
+    "german":"Guten Abend",
 	"spanish":"Buenos Noches",
 	"russian":"добрый вечер",
 	"french":"Bonne Soirée",
@@ -49,7 +53,8 @@ var goodEvening = {
 	"italian":"Buona Sera",
 }
 var sleepWell = {
-	"english":"Good Morning",
+	"english":"Good Night",
+    "german":"Gute Nacht",
 	"spanish":"Duerma Bien",
 	"russian":"Спать хорошо",
 	"french":"Dormez Bien",
@@ -234,7 +239,7 @@ var Dash = function() {
   this.language = "english"
 
   this.changeLanguage = function(language) {
-	  LANG = this.language;
+	  LANG = language;
 	  updateClock();
   }
   
@@ -308,6 +313,11 @@ var Dash = function() {
         console.log("loaded custom URL from saved settings")
       }
     }
+
+    // override language
+    if(keys.indexOf("language") != -1) {
+      this.changeLanguage(basil.get("language"));
+    } 
   }
 
   this.changeMode = function(mode) {
@@ -386,7 +396,7 @@ window.onload = function() {
   dat.GUI.toggleHide();
 
   var defa = gui.addFolder('default');
-  var languages = ["english", "spanish", "russian", "french", 
+  var languages = ["english", "german", "spanish", "russian", "french", 
   "mandarin", "japanese", "arabic", "hindi", "korean", "italian"];
   var languages = defa.add(dash, "language", languages);
   var themes = ["landscapes", "valenberg", "intotherift", "lennsan", 
@@ -401,7 +411,7 @@ window.onload = function() {
   
   languages.onChange(function(value) {
 	  dash.changeLanguage(value);
-	  alertify.log("Language set to:" + LANG);
+      basil.set("language", value);
 	  alertify.log("Saved settings")
   })
 
