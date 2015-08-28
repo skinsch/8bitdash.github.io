@@ -112,11 +112,11 @@ abbr,acronym { border: 0;
 
 #map {
   background-color: #000;
-
     filter:alpha(opacity=80); /* IE */
     -moz-opacity:0.8; /* Mozilla */
     opacity: 0.8; /* CSS3 */
 }
+
 
 .row {
   padding: 2em;

@@ -164,7 +164,6 @@ var links = {
         {"title":"Netlabels", "url" : "http://www.clongclongmoo.org/labels/"},
         {"title":"Magnatune", "url":"http://magnatune.com/genres/ambient/"}
       ]}],
-
     "Tools": [
        {
       "title": "Documents", 
@@ -219,6 +218,59 @@ var links = {
         {"title":"Flipboard", "url" : "https://flipboard.com/"},
         {"title":"ZapReader", "url" : "http://www.zapreader.com/"},
         {"title":"Spreeder", "url":"http://www.spreeder.com/"}
+      ]}],
+      "OS": [
+       {
+      "title": "Writing", 
+      "links" : [ 
+        {"title":"LibreOffice", "url" : "https://maps.google.com/"},
+        {"title":"Abiword", "url" : "http://www.openstreetmap.org/"},
+        {"title":"LateX", "url" : "http://opentopomap.org/"},
+        {"title":"LimeText", "url":"http://openmaps.eu/"},
+        {"title":"GVIM", "url" : "http://www.opencyclemap.org"}
+      ]},
+      { 
+      "title": "Image", 
+      "links" : [ 
+        {"title":"The GIMP", "url" : "http://www.nomadlist.com"},
+        {"title":"Krita", "url" : "http://www.nomadler.com"},
+        {"title":"Shotwell", "url" : "https://workfrom.co"},
+        {"title":"Blender", "url" : "https://www.airbnb.com/"},
+        {"title":"", "url" : "http://www.reddit.com/r/telecommuting/"},
+      ]},
+      {
+      "title": "Sound", 
+      "links" : [
+        {"title":"Ardour", "url" : "http://www.maptia.com"},
+        {"title":"Audacity", "url" : "http://www.travelistly.com/tv"},
+        {"title":"Rosegarden", "url" : "https://medium.com/on-travel"},
+        {"title":"", "url" : "http://www.tumblr.com/search/travel"},
+        {"title":"Fathoma", "url" : "http://fathomaway.com"}
+      ]},
+      {
+      "title": "Video", 
+      "links" : [
+        {"title":"Kine", "url" : "http://www.wikivoyage.org/"},
+        {"title":"Lonely Planet", "url":"http://www.lonelyplanet.com/"},
+        {"title":"Rough Guides", "url":"http://www.roughguides.com"},
+        {"title":"TravelScope", "url":"http://www.markuslerner.com/travelscope/"},
+        {"title":"On Reddit", "url":"http://www.reddit.com/r/travel"}
+      ]},
+       {
+      "title": "System", 
+      "links" : [
+        {"title":"Ubuntu", "url" : "http://www.booking.com/"},
+        {"title":"Fedora", "url" : "http://www.hostelworld.com"},
+        {"title":"XBMC", "url" : "http://www.hostelbookers.com"},
+        {"title":"Sugar", "url" : "http://www.lastminute.com"},
+      ]},
+       {
+      "title": "Code", 
+      "links" : [
+        {"title":"", "url" : "http://www.tripadvisor.com"},
+        {"title":"SpottedByLocals", "url" : "http://www.spottedbylocals.com"},
+        {"title":"Lonely Planet", "url":"http://www.lonelyplanet.com/"},
+        {"title":"Nuu.in", "url":"https://nuu.in/"}
       ]}],
       "Travel": [
        {
@@ -390,9 +442,11 @@ var topics = {
     {"name":"Games"}, 
     {"name":"Fun"}, 
     {"name":"Music"}, 
-    {"name":"Tools"},
     {"name":"Movies"},
-    {"name":"Travel"}]
+    {"name":"Travel"},
+    {"name":"Tools"},
+    {"name":"OS"}
+  ]
 }
 
 var loadCell = function(number, entries) {

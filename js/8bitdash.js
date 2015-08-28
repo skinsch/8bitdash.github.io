@@ -67,6 +67,7 @@ var sleepWell = {
 }
 var Dash = function() {
 
+  var cr_nec = "<a target=\"_blank\" href=\"http://supernaught.itch.io/necromorph\">Necromorph</a> by Alphonsus (<a target=\"_blank\" href=\"https://twitter.com/alphnsus\">@alphnsus</a>) and Dave (<a target=\"_blank\" href=\"https://www.twitter.com/momorgoth\">@momorgoth</a>)"
   var cr_hld = "<a target=\"_blank\" href=\"http://www.heart-machine.com/\">heart-machine.com</a>"+ 
     "+ <a target=\"_blank\" href=\"http://www.twitter.com/heartmachinez\">@HeartMachineZ</a>"
   var cr_ms = "<a target=\"_blank\" href=\"http://www.antonkudin.me/megasphere/\">Megasphere</a>"+
@@ -81,6 +82,9 @@ var Dash = function() {
   var cr_itr = "<a target=\"_blank\" href=\"http://www.facebook.com/intotherift\">Into The Rift</a>"
   
   var credits = {
+    "necromorph1.gif": cr_nec,
+    "necromorph2.gif": cr_nec,
+    "necromorph3.gif": cr_nec,
     "bebop.gif": cr_bp,
     "bicycle.gif": cr_vb,
     "blade.gif": cr_vb,
@@ -193,6 +197,10 @@ var Dash = function() {
        ["moving.gif",
         "pups_fixed.gif",
         "sticks_and_stones.gif"],
+     "necromorph":
+        ["necromorph1.gif",
+        "necromorph2.gif",
+        "necromorph3.gif"],
      "hyperlightdrifter":
        ["hyperlight.gif",
         "hyperlight2.gif"],
@@ -221,9 +229,8 @@ var Dash = function() {
     "dungeon.gif"]
   }
 
-  var startingModes = ["landscapes", "intotherift", "valenberg",
-      "lennsan", "rainworld", "bandygrass", 
-      "hyperlightdrifter", "megasphere", "movies"]
+  var startingModes = ["landscapes", "valenberg",
+      "lennsan", "necromorph", "hyperlightdrifter", "megasphere", "movies"]
   var x = Math.random() * startingModes.length;
   
   this.curMode = startingModes[Math.floor(x)];
@@ -399,7 +406,7 @@ window.onload = function() {
   var languages = ["english", "german", "spanish", "russian", "french", 
   "mandarin", "japanese", "arabic", "hindi", "korean", "italian"];
   var languages = defa.add(dash, "language", languages);
-  var themes = ["landscapes", "valenberg", "intotherift", "lennsan", 
+  var themes = ["landscapes", "necromorph", "valenberg", "intotherift", "lennsan", 
       "rainworld", "hyperlightdrifter",
       "megasphere", "bandygrass", "woods", "movies", "other"];
   var themes = defa.add(dash, "theme", themes);
