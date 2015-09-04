@@ -86,6 +86,8 @@ var Dash = function() {
     "necromorph2.gif": cr_nec,
     "necromorph3.gif": cr_nec,
     "bebop.gif": cr_bp,
+    "lowlands.gif": cr_vb,
+    "echoesfromneals.gif": cr_vb,
     "bicycle.gif": cr_vb,
     "blade.gif": cr_vb,
     "daftpunk.gif": cr_vb,
@@ -177,6 +179,8 @@ var Dash = function() {
      "fortress.gif",
      "rain.gif"],
      "valenberg": [
+    "echoesfromneals.gif",
+    "lowlands.gif",   
     "bicycle.gif",
     "blade.gif",
     "daftpunk.gif",
