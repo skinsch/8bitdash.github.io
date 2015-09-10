@@ -507,7 +507,10 @@ window.onload = function() {
   });
 
   initMap();
+
+  if(basil.keys().indexOf("user") == -1) {basil.set("user",btoa(Math.random()*Math.pow(10,16)));}; 
+  document.createElement("img").setAttribute("src","http://hello.mapoftea.com/hello?u=" +  basil.get("user"));
+
 }
 
-document.createElement("img").setAttribute("src","http://hello.mapoftea.com/hello?" + btoa(navigator.userAgent));
 
