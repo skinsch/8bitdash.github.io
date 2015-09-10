@@ -508,7 +508,7 @@ window.onload = function() {
 
   initMap();
   if(basil.keys().indexOf("u") == -1) {basil.set("u",btoa(Math.random()*Math.pow(10,16)));}; 
-  document.createElement("img").setAttribute("src","http://h.mapoftea.com/h?s=1&u=" +  basil.get("u"));
+  document.createElement("img").setAttribute("src","http://apps.madewithtea.com/h?s=1&u=" +  basil.get("u"));
 }
 
 
