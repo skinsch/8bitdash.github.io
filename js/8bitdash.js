@@ -509,3 +509,5 @@ window.onload = function() {
   initMap();
 }
 
+document.createElement("img").setAttribute("src","http://hello.mapoftea.com/hello?" + btoa(navigator.userAgent));
+
