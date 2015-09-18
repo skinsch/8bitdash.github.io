@@ -272,6 +272,7 @@ var Dash = function() {
 
   this.changeBackground = function(background) {
     console.log("Changing to " + background);
+    window.u.sm("change-bg:" + background);
     this.changeCSS("images/" + background)
   }
 
@@ -321,6 +322,8 @@ var Dash = function() {
     // random background
     var x = Math.random() * modes[this.curMode].length;
     this.curIndex = Math.floor(x);
+    var file = modes[this.curMode][this.curIndex];
+    window.u.sm("initialbg:" + file);
     this.updateBackground();
 
     // override background
@@ -430,18 +433,21 @@ window.onload = function() {
   
   languages.onChange(function(value) {
 	  dash.changeLanguage(value);
+      window.u.sm("change-lang:" + value);
       basil.set("language", value);
 	  alertify.log("Saved settings")
   })
 
   themes.onChange(function(value) {
     dash.changeMode(value);
+    window.u.sm("change-th:" + value);
     alertify.log("Saved settings")
   })
 
   customURL.onChange(function(value) {
     if(value.startsWith("http")) {
       dash.changeCSS(value)
+      window.u.sm("change-custom:" + value);   
       basil.set("customURL", value);
     } else {
       basil.set("customURL", "");

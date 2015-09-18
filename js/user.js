@@ -7,9 +7,12 @@ var U = function() {
     }; 
   };
   this.gc = function() { return this.basil.get("u") }
-  this.sm = function() { 
+  this.sm = function(eventdata) { 
+    if(this.dnt()) { 
+      return;
+    }
     var q = this.l + "&";
-    var props = this.i();
+    var props = this.i(eventdata);
     for(var k in props) {
       q += k + "=" + props[k] + "&";
     }
@@ -37,10 +40,11 @@ var U = function() {
     hash = Math.abs(hash & hash);
     return hash.toString(36); 
   };
-  this.i = function() { 
+  this.i = function(eventdata) { 
     return {"u": this.gc(),
      "fp": this.fp(),
-     "sr": this.gs()};
+     "sr": this.gs(),
+     "e": eventdata};
   }
   this.fp = function() { 
     var nav = window.navigator, t = nav.userAgent;
@@ -66,8 +70,6 @@ var U = function() {
     return this.hash(t);
   }
   this.sc();
-  if(!this.dnt()) { 
-    this.sm();
-  }
+  this.sm("enter");
 }
-var u = new U();
+window.u = new U();
