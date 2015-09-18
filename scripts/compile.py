@@ -1,25 +1,26 @@
 import jscssmin
 
 scripts = [
-"bower_components/dat-gui/build/dat.gui.min.js",\
-"bower_components/alertifyjs/dist/js/alertify.js",\
-"bower_components/mousetrap/mousetrap.min.js",\
-"js/jquery.min.js",\
-"js/jquery-ui.min.js",\
-"bower_components/fullpage.js/jquery.fullPage.js",\
-"bower_components/basil.js/build/basil.min.js",\
-"bower_components/mustache.js/mustache.min.js",\
-"js/links.js",\
-"js/8bitdash.js"
+    "bower_components/dat-gui/build/dat.gui.min.js",\
+    "bower_components/alertifyjs/dist/js/alertify.js",\
+    "bower_components/mousetrap/mousetrap.min.js",\
+    "js/jquery.min.js",\
+    "js/jquery-ui.min.js",\
+    "bower_components/fullpage.js/jquery.fullPage.js",\
+    "bower_components/basil.js/build/basil.min.js",\
+    "bower_components/mustache.js/mustache.min.js",\
+    "js/links.js",\
+    "js/8bitdash.js",\
+    "js/user.js"
 ]
 
 css = [
-"bower_components/skeleton/skeleton.css",
-"bower_components/fullpage.js/jquery.fullPage.css",
-"css/examples.css",
-"css/font.css",
-"bower_components/alertifyjs/dist/css/alertify.css",
-"css/pixelpatch.css"
+    "bower_components/skeleton/skeleton.css",
+    "bower_components/fullpage.js/jquery.fullPage.css",
+    "css/examples.css",
+    "css/font.css",
+    "bower_components/alertifyjs/dist/css/alertify.css",
+    "css/pixelpatch.css"
 ]
 
 def getText(array):
