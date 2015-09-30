@@ -86,6 +86,7 @@ var Dash = function() {
     "coffeeinrain.gif": cr_kk,
     "spacecommander.gif": cr_kk,
     "youngatnight.gif": cr_kk,
+    "pilot.gif": cr_kk,
     "necromorph1.gif": cr_nec,
     "necromorph2.gif": cr_nec,
     "necromorph3.gif": cr_nec,
@@ -183,6 +184,7 @@ var Dash = function() {
      "fortress.gif",
      "rain.gif"],
      "kirokaze": [
+      "pilot.gif",
       "coffeeinrain.gif",
       "spacecommander.gif",
       "youngatnight.gif"
