@@ -235,7 +235,7 @@ var links = {
         {"title":"NomadList", "url" : "http://www.nomadlist.com"},
         {"title":"Nomadler", "url" : "http://www.nomadler.com"},
         {"title":"WorkFrom", "url" : "https://workfrom.co"},
-        {"title":"AirBnB", "url" : "https://www.airbnb.com/"},
+        {"title":"RemoteOK", "url" : "https://remoteok.io/"},
         {"title":"on Reddit", "url" : "http://www.reddit.com/r/telecommuting/"},
       ]},
       {
