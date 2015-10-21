@@ -81,8 +81,12 @@ var Dash = function() {
   var cr_rw = "Rain World (<a target=\"_blank\" href=\"http://store.steampowered.com/app/312520/\">Steam</a>, <a target=\"_blank\" href=\"https://twitter.com/RainWorldGame\">Twitter</a>)"
   var cr_bp = "JayTKnox (<a target=\"_blank\" href=\"http://jayknoxart.tumblr.com\">jayknoxart.tumblr.com</a>, <a target=\"_blank\" href=\"https://twitter.com/JayTKnox\">@JayTKnox</a>)"
   var cr_itr = "<a target=\"_blank\" href=\"http://www.facebook.com/intotherift\">Into The Rift</a>"
-  
+  var cr_sl = "<a target=\"_blank\" href=\"http://www.wolfbrewgames.com/slain/\">Slain!</a>"
+
   var credits = {
+    "slain1.gif":cr_sl,
+    "slain2.gif":cr_sl,
+    "slain3.gif":cr_sl,
     "coffeeinrain.gif": cr_kk,
     "spacecommander.gif": cr_kk,
     "youngatnight.gif": cr_kk,
@@ -183,6 +187,11 @@ var Dash = function() {
      "mountain.gif",
      "fortress.gif",
      "rain.gif"],
+     "slain": [
+       "slain1.gif",
+       "slain2.gif", 
+       "slain3.gif"
+       ],
      "kirokaze": [
       "pilot.gif",
       "coffeeinrain.gif",
@@ -244,7 +253,7 @@ var Dash = function() {
     "dungeon.gif"]
   }
 
-  var startingModes = ["landscapes", "valenberg", "kirokaze", "necromorph", "hyperlightdrifter", "megasphere"]
+  var startingModes = ["landscapes", "valenberg", "kirokaze", "necromorph", "slain", "hyperlightdrifter", "megasphere"]
   var x = Math.random() * startingModes.length;
   
   this.curMode = startingModes[Math.floor(x)];
@@ -423,7 +432,7 @@ window.onload = function() {
   var languages = ["english", "german", "spanish", "russian", "french", 
   "mandarin", "japanese", "arabic", "hindi", "korean", "italian"];
   var languages = defa.add(dash, "language", languages);
-  var themes = ["landscapes", "kirokaze", "necromorph", "valenberg", "intotherift", "lennsan", 
+  var themes = ["landscapes", "slain", "kirokaze", "necromorph", "valenberg", "intotherift", "lennsan", 
       "rainworld", "hyperlightdrifter",
       "megasphere", "bandygrass", "woods", "movies", "other"];
   var themes = defa.add(dash, "theme", themes);
