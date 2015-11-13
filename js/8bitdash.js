@@ -104,6 +104,8 @@ var Dash = function() {
     "future.gif": cr_vb,
     "moon.png": cr_vb,
     "redbicycle.gif": cr_vb,
+    "drift.gif": cr_vb,
+    "ride.gif": cr_vb,
     "skate.gif": cr_vb,
     "streets.gif": cr_vb,
     "tv.gif": cr_vb,
@@ -199,6 +201,8 @@ var Dash = function() {
       "youngatnight.gif"
      ],
      "valenberg": [
+    "drift.gif",
+    "ride.gif",
     "echoesfromneals.gif",
     "lowlands.gif",   
     "bicycle.gif",
