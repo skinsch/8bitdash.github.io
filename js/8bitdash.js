@@ -87,8 +87,10 @@ var Dash = function() {
     "slain1.gif":cr_sl,
     "slain2.gif":cr_sl,
     "slain3.gif":cr_sl,
+    "bluebalcony.gif": cr_kk,
+    "shootingstars.gif": cr_kk,
+    "factory5.gif": cr_kk,
     "coffeeinrain.gif": cr_kk,
-    "spacecommander.gif": cr_kk,
     "youngatnight.gif": cr_kk,
     "pilot.gif": cr_kk,
     "necromorph1.gif": cr_nec,
@@ -196,14 +198,14 @@ var Dash = function() {
        ],
      "kirokaze": [
       "pilot.gif",
+      "bluebalcony.gif",
+      "factory5.gif",
+      "shootingstars.gif",
       "coffeeinrain.gif",
-      "spacecommander.gif",
       "youngatnight.gif"
      ],
      "valenberg": [
     "drift.gif",
-    "ride.gif",
-    "echoesfromneals.gif",
     "lowlands.gif",   
     "bicycle.gif",
     "blade.gif",
@@ -213,8 +215,7 @@ var Dash = function() {
     "moon.png",
     "redbicycle.gif",
     "skate.gif",
-    "streets.gif",
-    "tv.gif"],
+    "streets.gif"],
     "intotherift":["intotherift.gif",
     "intotherift2.gif",
     "intotherift3.gif"],
@@ -257,7 +258,7 @@ var Dash = function() {
     "dungeon.gif"]
   }
 
-  var startingModes = ["landscapes", "valenberg", "kirokaze", "necromorph", "slain", "hyperlightdrifter", "megasphere"]
+  var startingModes = ["landscapes", "kirokaze", "valenberg", "hyperlightdrifter", "megasphere"]
   var x = Math.random() * startingModes.length;
   
   this.curMode = startingModes[Math.floor(x)];
