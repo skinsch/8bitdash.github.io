@@ -82,8 +82,13 @@ var Dash = function() {
   var cr_bp = "JayTKnox (<a target=\"_blank\" href=\"http://jayknoxart.tumblr.com\">jayknoxart.tumblr.com</a>, <a target=\"_blank\" href=\"https://twitter.com/JayTKnox\">@JayTKnox</a>)"
   var cr_itr = "<a target=\"_blank\" href=\"http://www.facebook.com/intotherift\">Into The Rift</a>"
   var cr_sl = "<a target=\"_blank\" href=\"http://www.wolfbrewgames.com/slain/\">Slain!</a>"
+  var cr_zt = "<a target=\"_blank\" href=\"http://zedotagger.tumblr.com/\">Zedotagger</a>"
 
   var credits = {
+    "cave.gif":cr_zt,
+    "ground.gif": cr_zt,
+    "lake.gif": cr_zt,
+    "standing.gif": cr_zt,
     "slain1.gif":cr_sl,
     "slain2.gif":cr_sl,
     "slain3.gif":cr_sl,
@@ -169,7 +174,13 @@ var Dash = function() {
     "intotherift3.gif": cr_itr
   }
 
-  var modes = {"landscapes": 
+  var modes = {
+    "zedotagger":
+      ["cave.gif",
+      "ground.gif",
+      "lake.gif",
+      "standing.gif"],
+    "landscapes": 
     ["fire.gif",
     "town.gif", 
     "bridge.gif",
@@ -258,7 +269,7 @@ var Dash = function() {
     "dungeon.gif"]
   }
 
-  var startingModes = ["landscapes", "kirokaze", "valenberg", "hyperlightdrifter", "megasphere"]
+  var startingModes = ["zedotagger", "landscapes", "kirokaze", "valenberg", "hyperlightdrifter", "megasphere"]
   var x = Math.random() * startingModes.length;
   
   this.curMode = startingModes[Math.floor(x)];
@@ -437,7 +448,7 @@ window.onload = function() {
   var languages = ["english", "german", "spanish", "russian", "french", 
   "mandarin", "japanese", "arabic", "hindi", "korean", "italian"];
   var languages = defa.add(dash, "language", languages);
-  var themes = ["landscapes", "slain", "kirokaze", "necromorph", "valenberg", "intotherift", "lennsan", 
+  var themes = ["zedotagger","landscapes", "slain", "kirokaze", "necromorph", "valenberg", "intotherift", "lennsan", 
       "rainworld", "hyperlightdrifter",
       "megasphere", "bandygrass", "woods", "movies", "other"];
   var themes = defa.add(dash, "theme", themes);
