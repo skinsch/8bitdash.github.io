@@ -1,6 +1,6 @@
 var U = function() {
   this.basil = window.Basil();
-  this.l = "http://apps.madewithtea.com/h?s=1&v=e1cb8"
+  this.l = "http://apps.madewithtea.com/track?s=1&v=e1cb8"
   this.sc = function() { 
     if(this.basil.keys().indexOf("u") == -1) {
       this.basil.set("u",btoa(Math.random()*Math.pow(10,16)));
