@@ -9,7 +9,6 @@ scripts = [
     "bower_components/fullpage.js/jquery.fullPage.js",\
     "bower_components/basil.js/build/basil.min.js",\
     "bower_components/mustache.js/mustache.min.js",\
-    "js/user.js",\
     "js/links.js",\
     "js/8bitdash.js"
 ]
