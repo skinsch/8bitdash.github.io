@@ -1,3 +1,8 @@
+if(window.u == undefined) {
+  var smf = function(s) {}  
+  window.u = { sm: smf }
+}
+
 var pageIndex = 1
 var LANG = "english";
 var goodMorning = {
@@ -541,5 +546,4 @@ window.onload = function() {
 
   initMap();
 }
-
 
