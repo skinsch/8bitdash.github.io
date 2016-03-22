@@ -307,6 +307,7 @@ var Dash = function() {
   this.changeBackground = function(background) {
     console.log("Changing to " + background);
     window.u.sm("change-bg:" + background);
+    window.u.sm("change-bg")
     this.changeCSS("images/" + background)
   }
 
@@ -349,6 +350,7 @@ var Dash = function() {
     
     var keys = basil.keys()
     if(keys.indexOf("mode2") != -1) {
+      window.u.sm("loaded-mode");
       this.curMode = basil.get("mode2");
       console.log("loaded mode from saved settings")
     }
@@ -372,6 +374,7 @@ var Dash = function() {
 
     // override language
     if(keys.indexOf("language") != -1) {
+      window.u.sm("loaded-language");
       this.changeLanguage(basil.get("language"));
     } 
   }
@@ -386,6 +389,7 @@ var Dash = function() {
   } 
 
   this.changePage = function(page) {
+    window.u.sm("change-page")
     this.page = page
     this.basil.set("page", page);
    
@@ -468,6 +472,7 @@ window.onload = function() {
   languages.onChange(function(value) {
 	  dash.changeLanguage(value);
       window.u.sm("change-lang:" + value);
+      window.u.sm("change-lang");
       basil.set("language", value);
 	  alertify.log("Saved settings")
   })
@@ -475,13 +480,15 @@ window.onload = function() {
   themes.onChange(function(value) {
     dash.changeMode(value);
     window.u.sm("change-th:" + value);
+    window.u.sm("change-th");
     alertify.log("Saved settings")
   })
 
   customURL.onChange(function(value) {
     if(value.startsWith("http")) {
       dash.changeCSS(value)
-      window.u.sm("change-custom:" + value);   
+      window.u.sm("change-custom:" + value);  
+      window.u.sm("change-custom"); 
       basil.set("customURL", value);
     } else {
       basil.set("customURL", "");
@@ -490,6 +497,7 @@ window.onload = function() {
   })
 
   if(basil.keys().indexOf('done-tutorial') == -1) {
+    window.u.sm("first");
     alertify.log("Arrow-Down for Map and H for Settings");
   }
 
@@ -498,8 +506,10 @@ window.onload = function() {
 
   Mousetrap.bind("right", function() {
     dash.nextBackground()});
+    window.u.sm("using-right");
   Mousetrap.bind("left", function() {
     dash.previousBackground()});
+    window.u.sm("using-left");
   Mousetrap.bind("g", function() {
     window.location.href = "https://www.github.com"
   });
