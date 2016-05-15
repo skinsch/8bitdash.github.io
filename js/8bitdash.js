@@ -90,6 +90,13 @@ var Dash = function() {
   var cr_zt = "<a target=\"_blank\" href=\"http://zedotagger.tumblr.com/\">Zedotagger</a>"
 
   var credits = {
+    "iplayoldgames.gif":cr_kk,
+    "metro_final.gif":cr_kk,
+    "thieves.gif":cr_kk,
+    "train.gif":cr_kk,
+    "elderorc.gif":cr_kk,
+    "player2.gif":cr_kk,
+    "spaceport.gif":cr_kk,
     "cave.gif":cr_zt,
     "ground.gif": cr_zt,
     "lake.gif": cr_zt,
@@ -214,6 +221,13 @@ var Dash = function() {
        "slain3.gif"
        ],
      "kirokaze": [
+      "iplayoldgames.gif",
+      "metro_final.gif",
+      "thieves.gif",
+      "train.gif",
+      "elderorc.gif",
+      "player2.gif",
+      "spaceport.gif",
       "pilot.gif",
       "bluebalcony.gif",
       "factory5.gif",
