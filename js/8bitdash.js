@@ -72,6 +72,7 @@ var sleepWell = {
 }
 var Dash = function() {
 
+  var cr_fd = "<a target=\"_blank\" href=\"https://twitter.com/PetterRamstad\">Petter Ramstad (faxdoc)</a>"
   var cr_kk = "<a target=\"_blank\" href=\"http://kirokaze.deviantart.com/\">Kirokaze</a>"
   var cr_nec = "<a target=\"_blank\" href=\"http://supernaught.itch.io/necromorph\">Necromorph</a> by Alphonsus (<a target=\"_blank\" href=\"https://twitter.com/alphnsus\">@alphnsus</a>) and Dave (<a target=\"_blank\" href=\"https://www.twitter.com/momorgoth\">@momorgoth</a>)"
   var cr_hld = "<a target=\"_blank\" href=\"http://www.heart-machine.com/\">heart-machine.com</a>"+ 
@@ -90,6 +91,15 @@ var Dash = function() {
   var cr_zt = "<a target=\"_blank\" href=\"http://zedotagger.tumblr.com/\">Zedotagger</a>"
 
   var credits = {
+    "cacao_and_coffee_shop.gif":cr_fd,
+    "comition_sky_left_to_right.gif":cr_fd,
+    "flower_shop.gif":cr_fd,
+    "lullaby.gif":cr_fd,
+    "midnight_melancholy.gif":cr_fd,
+    "mountain_mote.gif":cr_fd,
+    "nero_land.gif":cr_fd,
+    "sideshop.gif":cr_fd,
+    "stacking_houses_on_a_windy_day.gif": cr_fd,
     "iplayoldgames.gif":cr_kk,
     "metro_final.gif":cr_kk,
     "thieves.gif":cr_kk,
@@ -114,6 +124,8 @@ var Dash = function() {
     "necromorph2.gif": cr_nec,
     "necromorph3.gif": cr_nec,
     "bebop.gif": cr_bp,
+    "controlroom.gif": cr_vb,
+    "highfloor.gif": cr_vb,
     "nighttrain.gif": cr_vb, 
     "lowlands.gif": cr_vb,
     "echoesfromneals.gif": cr_vb,
@@ -188,6 +200,16 @@ var Dash = function() {
   }
 
   var modes = {
+    "faxdoc":
+      ["cacao_and_coffee_shop.gif",
+    "comition_sky_left_to_right.gif",
+    "flower_shop.gif",
+    "lullaby.gif",
+    "midnight_melancholy.gif",
+    "mountain_mote.gif",
+    "nero_land.gif",
+    "sideshop.gif",
+    "stacking_houses_on_a_windy_day.gif"],
     "zedotagger":
       ["cave.gif",
       "ground.gif",
@@ -236,6 +258,8 @@ var Dash = function() {
       "youngatnight.gif"
      ],
      "valenberg": [
+    "controlroom.gif",
+    "highfloor.gif",   
     "nighttrain.gif",
     "drift.gif",
     "lowlands.gif",   
@@ -290,7 +314,7 @@ var Dash = function() {
     "dungeon.gif"]
   }
 
-  var startingModes = ["zedotagger", "landscapes", "kirokaze", "valenberg", "hyperlightdrifter", "megasphere"]
+  var startingModes = ["landscapes", "kirokaze", "valenberg", "faxdoc"]
   var x = Math.random() * startingModes.length;
   
   this.curMode = startingModes[Math.floor(x)];
@@ -473,7 +497,7 @@ window.onload = function() {
   var languages = ["english", "german", "spanish", "russian", "french", 
   "mandarin", "japanese", "arabic", "hindi", "korean", "italian"];
   var languages = defa.add(dash, "language", languages);
-  var themes = ["zedotagger","landscapes", "slain", "kirokaze", "necromorph", "valenberg", "intotherift", "lennsan", 
+  var themes = ["faxdoc","zedotagger","landscapes", "slain", "kirokaze", "necromorph", "valenberg", "intotherift", "lennsan", 
       "rainworld", "hyperlightdrifter",
       "megasphere", "bandygrass", "woods", "movies", "other"];
   var themes = defa.add(dash, "theme", themes);
