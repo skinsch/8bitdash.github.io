@@ -72,7 +72,8 @@ var sleepWell = {
 }
 var Dash = function() {
 
-  var cr_fd = "<a target=\"_blank\" href=\"https://twitter.com/PetterRamstad\">Petter Ramstad (faxdoc)</a>"
+  var cr_ap = "<a target=\"_blank\" href=\"https://twitter.com/apostrophe_dot\">APO*</a/>"
+    var cr_fd = "<a target=\"_blank\" href=\"https://twitter.com/PetterRamstad\">Petter Ramstad (faxdoc)</a>"
   var cr_kk = "<a target=\"_blank\" href=\"http://kirokaze.deviantart.com/\">Kirokaze</a>"
   var cr_nec = "<a target=\"_blank\" href=\"http://supernaught.itch.io/necromorph\">Necromorph</a> by Alphonsus (<a target=\"_blank\" href=\"https://twitter.com/alphnsus\">@alphnsus</a>) and Dave (<a target=\"_blank\" href=\"https://www.twitter.com/momorgoth\">@momorgoth</a>)"
   var cr_hld = "<a target=\"_blank\" href=\"http://www.heart-machine.com/\">heart-machine.com</a>"+ 
@@ -91,13 +92,18 @@ var Dash = function() {
   var cr_zt = "<a target=\"_blank\" href=\"http://zedotagger.tumblr.com/\">Zedotagger</a>"
 
   var credits = {
+    "sky.gif":cr_ap,
+    "laundry.gif":cr_ap,
+    "aquarium.gif":cr_ap,
+    "mechs.gif":cr_ap,
+    "hallway.gif":cr_ap,
+    "tokyo.gif":cr_ap,
     "cacao_and_coffee_shop.gif":cr_fd,
     "comition_sky_left_to_right.gif":cr_fd,
     "flower_shop.gif":cr_fd,
     "lullaby.gif":cr_fd,
     "midnight_melancholy.gif":cr_fd,
     "mountain_mote.gif":cr_fd,
-    "nero_land.gif":cr_fd,
     "sideshop.gif":cr_fd,
     "stacking_houses_on_a_windy_day.gif": cr_fd,
     "iplayoldgames.gif":cr_kk,
@@ -200,6 +206,12 @@ var Dash = function() {
   }
 
   var modes = {
+    "apo":
+      ["sky.gif",
+       "aquarium.gif",
+       "laundry.gif",
+       "mechs.gif",
+       "tokyo.gif"],
     "faxdoc":
       ["cacao_and_coffee_shop.gif",
     "comition_sky_left_to_right.gif",
@@ -207,7 +219,6 @@ var Dash = function() {
     "lullaby.gif",
     "midnight_melancholy.gif",
     "mountain_mote.gif",
-    "nero_land.gif",
     "sideshop.gif",
     "stacking_houses_on_a_windy_day.gif"],
     "zedotagger":
@@ -314,7 +325,7 @@ var Dash = function() {
     "dungeon.gif"]
   }
 
-  var startingModes = ["landscapes", "kirokaze", "valenberg", "faxdoc"]
+  var startingModes = ["apo","landscapes", "kirokaze", "valenberg", "faxdoc"]
   var x = Math.random() * startingModes.length;
   
   this.curMode = startingModes[Math.floor(x)];
@@ -497,7 +508,7 @@ window.onload = function() {
   var languages = ["english", "german", "spanish", "russian", "french", 
   "mandarin", "japanese", "arabic", "hindi", "korean", "italian"];
   var languages = defa.add(dash, "language", languages);
-  var themes = ["faxdoc","zedotagger","landscapes", "slain", "kirokaze", "necromorph", "valenberg", "intotherift", "lennsan", 
+  var themes = ["apo","faxdoc","zedotagger","landscapes", "slain", "kirokaze", "necromorph", "valenberg", "intotherift", "lennsan", 
       "rainworld", "hyperlightdrifter",
       "megasphere", "bandygrass", "woods", "movies", "other"];
   var themes = defa.add(dash, "theme", themes);
