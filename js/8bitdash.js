@@ -1,5 +1,5 @@
 if(window.u == undefined) {
-  var smf = function(s) {}  
+  var smf = function(s) {}
   window.u = { sm: smf }
 }
 
@@ -7,7 +7,7 @@ var pageIndex = 1
 var LANG = "english";
 var goodMorning = {
 	"english":"Good Morning",
-    "german":"Guten Morgen",
+  "german":"Guten Morgen",
 	"spanish":"Buenos Días",
 	"russian":"Доброе утро",
 	"french":"Bonjour",
@@ -74,9 +74,9 @@ var Dash = function() {
 
   var cr_ap = "<a target=\"_blank\" href=\"https://twitter.com/apostrophe_dot\">APO*</a/>"
     var cr_fd = "<a target=\"_blank\" href=\"https://twitter.com/PetterRamstad\">Petter Ramstad (faxdoc)</a>"
-  var cr_kk = "<a target=\"_blank\" href=\"http://kirokaze.deviantart.com/\">Kirokaze</a>"
+  var cr_kk = "Kirokaze - <a target=\"_blank\" href=\"https://www.patreon.com/kirokaze/posts\">Support the artist</a> - <a target=\"_blank\" href=\"http://kirokaze.deviantart.com/\">Deviantart</a>"
   var cr_nec = "<a target=\"_blank\" href=\"http://supernaught.itch.io/necromorph\">Necromorph</a> by Alphonsus (<a target=\"_blank\" href=\"https://twitter.com/alphnsus\">@alphnsus</a>) and Dave (<a target=\"_blank\" href=\"https://www.twitter.com/momorgoth\">@momorgoth</a>)"
-  var cr_hld = "<a target=\"_blank\" href=\"http://www.heart-machine.com/\">heart-machine.com</a>"+ 
+  var cr_hld = "<a target=\"_blank\" href=\"http://www.heart-machine.com/\">heart-machine.com</a>"+
     "+ <a target=\"_blank\" href=\"http://www.twitter.com/heartmachinez\">@HeartMachineZ</a>"
   var cr_ms = "<a target=\"_blank\" href=\"http://www.antonkudin.me/megasphere/\">Megasphere</a>"+
     " by Anton Kudin (<a href=\"http://www.twitter.com/antonkudin\">@antonkudin</a>)"
@@ -92,6 +92,11 @@ var Dash = function() {
   var cr_zt = "<a target=\"_blank\" href=\"http://zedotagger.tumblr.com/\">Zedotagger</a>"
 
   var credits = {
+    "troll_cave.gif":cr_kk,
+    "train_city.gif":cr_kk,
+    "robot_alley.gif": cr_kk,
+    "dark_pillar.gif": cr_kk,
+    "bad_landing.gif": cr_kk,
     "sky.gif":cr_ap,
     "laundry.gif":cr_ap,
     "aquarium.gif":cr_ap,
@@ -132,7 +137,7 @@ var Dash = function() {
     "bebop.gif": cr_bp,
     "controlroom.gif": cr_vb,
     "highfloor.gif": cr_vb,
-    "nighttrain.gif": cr_vb, 
+    "nighttrain.gif": cr_vb,
     "lowlands.gif": cr_vb,
     "echoesfromneals.gif": cr_vb,
     "bicycle.gif": cr_vb,
@@ -147,7 +152,7 @@ var Dash = function() {
     "skate.gif": cr_vb,
     "streets.gif": cr_vb,
     "tv.gif": cr_vb,
-    "barfly.gif": "Longshot", 
+    "barfly.gif": "Longshot",
     "first.png": cr_ls,
     "second.png": cr_ls,
     "third.png": cr_ls,
@@ -157,7 +162,7 @@ var Dash = function() {
     "pups_fixed.gif": cr_rw,
     "sticks_and_stones.gif": cr_rw,
     "hyperlight.gif": cr_hld,
-    "hyperlight2.gif": cr_hld, 
+    "hyperlight2.gif": cr_hld,
     "megasphere1.gif": cr_ms,
     "megasphere2.gif": cr_ms,
     "megasphere3.gif": cr_ms,
@@ -165,12 +170,12 @@ var Dash = function() {
     "megasphere5.gif": cr_ms,
     "wizard.gif" : cr_sg,
     "gang.gif" : cr_sg,
-    "darksouls.gif" : cr_sg, 
+    "darksouls.gif" : cr_sg,
     "woods.png": "",
     "mockup.gif": cr_bs,
     "bitslap.gif": cr_bs,
     "asylumgate.gif": cr_bs,
-    "nightcycle.gif": cr_bs, 
+    "nightcycle.gif": cr_bs,
     "fireflyreboot.gif": cr_bs,
     "town.png":"http://www.serebiiforums.com/showthread.php?379701-Another-Sprite-Showcase",
     "ironberg.png":"http://www.serebiiforums.com/showthread.php?379701-Another-Sprite-Showcase",
@@ -226,19 +231,19 @@ var Dash = function() {
       "ground.gif",
       "lake.gif",
       "standing.gif"],
-    "landscapes": 
+    "landscapes":
     ["fire.gif",
-    "town.gif", 
+    "town.gif",
     "bridge.gif",
      "coast.gif",
-     "dawn.gif", 
+     "dawn.gif",
      "grandcanyon.gif",
      "northlights.gif",
      "lake.gif",
-     "falls.gif", 
+     "falls.gif",
      "castle.gif",
      "bridge_raining.gif",
-     "snow.gif", 
+     "snow.gif",
      "nature.gif",
      "sea.gif",
      "swirling.gif",
@@ -250,10 +255,15 @@ var Dash = function() {
      "rain.gif"],
      "slain": [
        "slain1.gif",
-       "slain2.gif", 
+       "slain2.gif",
        "slain3.gif"
        ],
      "kirokaze": [
+       "troll_cave.gif",
+       "troll_cave.gif",
+       "robot_alley.gif",
+       "dark_pillar.gif",
+       "bad_landing.gif",
       "iplayoldgames.gif",
       "metro_final.gif",
       "thieves.gif",
@@ -270,10 +280,10 @@ var Dash = function() {
      ],
      "valenberg": [
     "controlroom.gif",
-    "highfloor.gif",   
+    "highfloor.gif",
     "nighttrain.gif",
     "drift.gif",
-    "lowlands.gif",   
+    "lowlands.gif",
     "bicycle.gif",
     "blade.gif",
     "daftpunk.gif",
@@ -302,35 +312,35 @@ var Dash = function() {
         "hyperlight2.gif"],
      "megasphere":
        ["megasphere1.gif",
-        "megasphere2.gif", 
+        "megasphere2.gif",
         "megasphere3.gif",
         "megasphere4.gif",
         "megasphere5.gif"],
      "bandygrass":
        ["gang.gif", "darksouls.gif", "wizard.gif"],
      "woods":
-     ["woods.png"],  
+     ["woods.png"],
      "movies":["bebop.gif"],
-     "other": 
+     "other":
     ["barfly.gif",
-    "nightcycle.gif", 
-    "fireflyreboot.gif", 
-    "mockup.gif", 
-    "asylumgate.gif", 
+    "nightcycle.gif",
+    "fireflyreboot.gif",
+    "mockup.gif",
+    "asylumgate.gif",
     "bitslap.gif",
-    "town.png", 
-    "ironberg.png", 
-    "forrest.png", 
-    "leonard.png", 
+    "town.png",
+    "ironberg.png",
+    "forrest.png",
+    "leonard.png",
     "dungeon.gif"]
   }
 
   var startingModes = ["apo","landscapes", "kirokaze", "valenberg", "faxdoc"]
   var x = Math.random() * startingModes.length;
-  
+
   this.curMode = startingModes[Math.floor(x)];
-  this.custom = "Insert URL"; 
-  
+  this.custom = "Insert URL";
+
   this.page = "clock"
   this.curIndex = 0;
 
@@ -344,12 +354,12 @@ var Dash = function() {
 	  LANG = language;
 	  updateClock();
   }
-  
+
   this.changeCSS = function(imageURL) {
     var rule = document.styleSheets[0].cssRules[0];
     var postfix = "no-repeat center center fixed";
     var s = "url(" + imageURL + ") " + postfix;
-    rule.style.background = s 
+    rule.style.background = s
     rule.style.backgroundSize = "cover"
   }
 
@@ -363,7 +373,7 @@ var Dash = function() {
   this.changeCredit = function(name) {
     console.log("Changing credit to " + name);
     var s = name;
-    document.getElementById("footer").innerHTML = s; 
+    document.getElementById("footer").innerHTML = s;
   }
 
   this.updateBackground = function() {
@@ -375,7 +385,7 @@ var Dash = function() {
     } else {
       this.changeCredit("Mention me @madewithtea to take credit for your art.")
     }
-  } 
+  }
 
   this.nextBackground = function() {
     this.curIndex += 1;
@@ -386,7 +396,7 @@ var Dash = function() {
   }
 
   this.previousBackground = function() {
-    this.curIndex -= 1; 
+    this.curIndex -= 1;
     if(this.curIndex < 0) {
       this.curIndex = modes[this.curMode].length - 1;
     }
@@ -396,7 +406,7 @@ var Dash = function() {
   this.initialize = function(basil) {
     // read the configuration
     this.basil = basil;
-    
+
     var keys = basil.keys()
     if(keys.indexOf("mode2") != -1) {
       window.u.sm("loaded-mode");
@@ -416,7 +426,7 @@ var Dash = function() {
       this.custom = basil.get("customURL");
       if(this.custom.startsWith("http")) {
         this.changeCSS(this.custom);
-        console.log(this.custom);  
+        console.log(this.custom);
         console.log("loaded custom URL from saved settings")
       }
     }
@@ -425,23 +435,23 @@ var Dash = function() {
     if(keys.indexOf("language") != -1) {
       window.u.sm("loaded-language");
       this.changeLanguage(basil.get("language"));
-    } 
+    }
   }
 
   this.changeMode = function(mode) {
-    this.curMode = mode 
+    this.curMode = mode
     this.curIndex = 0
     this.updateBackground();
 
     this.basil.set("mode2", mode);
     this.basil.set("done-tutorial", true);
-  } 
+  }
 
   this.changePage = function(page) {
     window.u.sm("change-page")
     this.page = page
     this.basil.set("page", page);
-   
+
     if(page == "clock") {
       $.fn.fullpage.moveTo(1,1);
     } else {
@@ -453,7 +463,7 @@ var Dash = function() {
 var updateClock = function() {
     var currentTime = new Date();
     var currentHours = currentTime.getHours();
-    
+
     var greeting = ""
     if((0 <= currentHours) && (currentHours < 6)) {
 		greeting = goodNight[LANG];
@@ -462,29 +472,29 @@ var updateClock = function() {
 		greeting = goodMorning[LANG];
     }
     if((12 <= currentHours) && (currentHours < 18)) {
-		greeting = goodAfternoon[LANG];	
+		greeting = goodAfternoon[LANG];
     }
     if((18 <= currentHours) && (currentHours < 22)) {
 		greeting = goodEvening[LANG];
     }
     if((22 <= currentHours) && (currentHours < 24)) {
-		greeting = sleepWell[LANG];    
+		greeting = sleepWell[LANG];
 	}
-    
+
     var currentMinutes = currentTime.getMinutes ( );
     var currentSeconds = currentTime.getSeconds ( );
-  
+
     currentMinutes = ( currentMinutes < 10 ? "0" : "" ) + currentMinutes;
     currentSeconds = ( currentSeconds < 10 ? "0" : "" ) + currentSeconds;
-  
+
     var timeOfDay = ( currentHours < 12 ) ? "am" : "pm";
-  
+
     currentHours = ( currentHours > 12 ) ? currentHours - 12 : currentHours;
     currentHours = ( currentHours == 0 ) ? 12 : currentHours;
-  
+
     var currentTimeString = currentHours + ":" + currentMinutes + " " + timeOfDay;
     document.getElementById("clock").firstChild.nodeValue = currentTimeString;
-    document.getElementById("greeting").firstChild.nodeValue = greeting 
+    document.getElementById("greeting").firstChild.nodeValue = greeting
   }
 
 window.onload = function() {
@@ -493,22 +503,22 @@ window.onload = function() {
      resize: false,
      css3: true,
      onLeave: function(index, nextIndex, direction){
-      pageIndex = nextIndex 
+      pageIndex = nextIndex
      }
   })
 
   var dash = new Dash()
-  var basil = new window.Basil(); 
+  var basil = new window.Basil();
 
-  dash.initialize(basil) 
+  dash.initialize(basil)
   var gui = new dat.GUI();
   dat.GUI.toggleHide();
 
   var defa = gui.addFolder('default');
-  var languages = ["english", "german", "spanish", "russian", "french", 
+  var languages = ["english", "german", "spanish", "russian", "french",
   "mandarin", "japanese", "arabic", "hindi", "korean", "italian"];
   var languages = defa.add(dash, "language", languages);
-  var themes = ["apo","faxdoc","zedotagger","landscapes", "slain", "kirokaze", "necromorph", "valenberg", "intotherift", "lennsan", 
+  var themes = ["apo","faxdoc","zedotagger","landscapes", "slain", "kirokaze", "necromorph", "valenberg", "intotherift", "lennsan",
       "rainworld", "hyperlightdrifter",
       "megasphere", "bandygrass", "woods", "movies", "other"];
   var themes = defa.add(dash, "theme", themes);
@@ -517,7 +527,7 @@ window.onload = function() {
   var customize = gui.addFolder("fixed custom URL");
   var customURL = customize.add(dash, "custom");
   customize.open();
-  
+
   languages.onChange(function(value) {
 	  dash.changeLanguage(value);
       window.u.sm("change-lang:" + value);
@@ -536,8 +546,8 @@ window.onload = function() {
   customURL.onChange(function(value) {
     if(value.startsWith("http")) {
       dash.changeCSS(value)
-      window.u.sm("change-custom:" + value);  
-      window.u.sm("change-custom"); 
+      window.u.sm("change-custom:" + value);
+      window.u.sm("change-custom");
       basil.set("customURL", value);
     } else {
       basil.set("customURL", "");
@@ -607,4 +617,3 @@ window.onload = function() {
 
   initMap();
 }
-
