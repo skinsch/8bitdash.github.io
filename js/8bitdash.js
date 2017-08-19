@@ -339,7 +339,8 @@ var Dash = function() {
   var x = Math.random() * startingModes.length;
 
   this.curMode = startingModes[Math.floor(x)];
-  this.custom = "Insert URL";
+
+   this.custom = "Insert URL";
 
   this.page = "clock"
   this.curIndex = 0;
@@ -417,6 +418,12 @@ var Dash = function() {
     // random background
     var x = Math.random() * modes[this.curMode].length;
     this.curIndex = Math.floor(x);
+  
+    if(this.curMode == "kirokaze") {
+    showBanner(true)
+  }
+
+     
     var file = modes[this.curMode][this.curIndex];
     window.u.sm("initialbg:" + file);
     this.updateBackground();
@@ -460,6 +467,12 @@ var Dash = function() {
   }
 }
 
+var showBanner = function(show) {
+  ga('send','event','shop','banner'); 
+
+  alertify.log("Fine Art Prints of Kirokaze available. <a href='http://8bitdash.threadless.com'>THE OFFICIAL SHOP</a>")
+}
+
 var updateClock = function() {
     var currentTime = new Date();
     var currentHours = currentTime.getHours();
@@ -498,7 +511,7 @@ var updateClock = function() {
   }
 
 window.onload = function() {
-
+  
   $('#fullpage').fullpage({
      resize: false,
      css3: true,
@@ -617,3 +630,5 @@ window.onload = function() {
 
   initMap();
 }
+
+
