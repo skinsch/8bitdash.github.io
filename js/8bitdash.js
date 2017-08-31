@@ -335,7 +335,7 @@ var Dash = function() {
     "dungeon.gif"]
   }
 
-  var startingModes = ["apo","landscapes", "kirokaze", "valenberg", "faxdoc"]
+  var startingModes = ["landscapes", "kirokaze", "valenberg"]
   var x = Math.random() * startingModes.length;
 
   this.curMode = startingModes[Math.floor(x)];
