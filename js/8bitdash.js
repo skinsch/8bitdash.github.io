@@ -467,10 +467,16 @@ var Dash = function() {
   }
 }
 
+var shopClick = function() {
+ console.log("sending event")
+ ga('send', 'event', 'shop-click', 'kirokaze'); 
+  window.location.href = 'https://8bitdash.threadless.com/collections/kirokaze-1/'
+}
+
 var showBanner = function(show) {
   ga('send','event','shop','banner'); 
 
-  alertify.log("Fine Art Prints available. <br/><a href='https://8bitdash.threadless.com/collections/kirokaze-1/'>THE OFFICIAL SHOP</a>")
+  alertify.log("Fine Art Prints available. <br/><a onClick='shopClick()'>THE OFFICIAL SHOP</a>")
 }
 
 var updateClock = function() {
