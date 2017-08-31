@@ -470,7 +470,7 @@ var Dash = function() {
 var showBanner = function(show) {
   ga('send','event','shop','banner'); 
 
-  alertify.log("Fine Art Prints of Kirokaze available. <a href='http://8bitdash.threadless.com'>THE OFFICIAL SHOP</a>")
+  alertify.log("Fine Art Prints available. <a href='https://8bitdash.threadless.com/collections/kirokaze-1/'>THE OFFICIAL SHOP</a>")
 }
 
 var updateClock = function() {
