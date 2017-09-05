@@ -419,9 +419,9 @@ var Dash = function() {
     var x = Math.random() * modes[this.curMode].length;
     this.curIndex = Math.floor(x);
   
-    if(this.curMode == "kirokaze") {
+    //if(this.curMode == "kirokaze") {
     showBanner(true)
-  }
+    //}
 
      
     var file = modes[this.curMode][this.curIndex];
@@ -480,7 +480,7 @@ trackOutboundLink('https://8bitdash.threadless.com/collections/kirokaze-1/'); re
 
 var showBanner = function(show) {
   ga('send','event','shop','banner'); 
-  alertify.log("Fine Art Prints available. <br/><a onClick='trackKirokaze()'>THE OFFICIAL SHOP</a>")
+  alertify.log("Fine Art Prints available. <br/><a onClick='trackKirokaze()'>THE OFFICIAL SHOP</a>","",60000)
 }
 
 var updateClock = function() {
