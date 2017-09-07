@@ -1,0 +1,8 @@
+{
+  "name": "8bitdash",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react-ga": "^2.2.0"
+  }
+}
