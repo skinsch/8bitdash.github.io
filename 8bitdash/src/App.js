@@ -131,7 +131,7 @@ const timeOfDay = ( currentHours < 12 ) ? "am" : "pm";
     return(<ReactGA.OutboundLink
         eventLabel="shop"
         to="https://8bitdash.threadless.com/">
-        Buy Offical Prints          
+        NEW: Valenberg's Pieces for Sale 
     </ReactGA.OutboundLink>)
     }
 
