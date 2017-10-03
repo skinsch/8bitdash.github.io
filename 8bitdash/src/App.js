@@ -130,8 +130,8 @@ const timeOfDay = ( currentHours < 12 ) ? "am" : "pm";
     shop() {
     return(<ReactGA.OutboundLink
         eventLabel="shop"
-        to="https://8bitdash.threadless.com/collections/kirokaze-1/">
-        Buy Offical Prints          
+        to="https://8bitdash.threadless.com/">
+        NEW: Valenberg's Pieces for Sale 
     </ReactGA.OutboundLink>)
     }
 
