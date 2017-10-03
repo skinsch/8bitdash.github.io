@@ -14,7 +14,7 @@ body {
     font-family: 'minecraftfont'
 }
 
-#center{
+#dashboard > #clock > #center{
     margin-left: auto;
     margin-right: auto;
     position: absolute;
@@ -25,30 +25,7 @@ body {
     text-shadow: 0px 0px 2px #000;
 }
 
-.Bottom { 
-    right: 0;
-    bottom: 0;
-    opacity: 0.8;
-    text-align: center;
-    position: fixed;
-    background: black;
-    padding: 0.5rem;
-    overflow: auto;
-}
-
-.Bottom a {
-    color: white
-}
-
-.Bottom a:hover { 
-    color: white;
-}
-
-.Bottom a:visited { 
-    color: white;
-}
-
-.App {
+#dashboard > #clock {
   text-align: center;
   position: fixed;
   top: 0;
@@ -59,23 +36,48 @@ body {
   background: black; /* Just to visualize the extent */
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+#dashboard > #bottom { 
+    right: 0;
+    bottom: 0;
+    opacity: 0.8;
+    text-align: center;
+    position: fixed;
+    background: black;
+    padding: 0.5rem;
+    overflow: auto;
+    animation-name: rightin;
+    animation-duration: 2s;
+
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+@keyframes leftin {
+    from {left: -500px;}
+    to {left: 0}
+  }
+
+@keyframes rightin {
+    from {right: -500px;}
+    to {right: 0}
+  }
+
+#dashboard > #middle-bottom { 
+    bottom: 0;
+    opacity: 0.8;
+    text-align: center;
+    position: fixed;
+    background: black;
+    padding: 0.5rem;
+    overflow: auto;
+}
+a {
+    color: white
 }
 
-.App-intro {
-  font-size: large;
+a:hover { 
+    color: white;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+a:visited { 
+    color: white;
 }
+
