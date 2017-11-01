@@ -9,20 +9,64 @@
 
 }
 
-body {
-    color: white;
-    font-family: 'minecraftfont'
+@font-face {
+	font-family: 'print21';
+	src: url('./PrintChar21.eot');
+	src: local('print21'), url('./PrintChar21.woff') format('woff'), url('./PrintChar21.ttf') format('truetype');
+}
+/* use this class to attach this font to any element i.e. <p class="fontsforweb_fontid_1412">Text with this font applied</p> */
+.fontsforweb_fontid_1412 {
+	font-family: 'minecraftfont' !important;
+
 }
 
-#dashboard > #clock > #center{
+body {
+    color: white;
+    font-family: 'minecraftfont';
+		letter-spacing: 1px;
+		background-color: black;
+}
+
+.textshadow {
+		text-shadow: 0px 0px 2px #000;
+}
+
+@keyframes fadein {
+    from {opacity: 0.0}
+    to {opacity: 1.0}
+  }
+
+.bw {
+	-webkit-filter: opacity(1) grayscale(1);
+  filter: opacity(1) grayscale(1);
+}
+.color {
+	-webkit-filter: opacity(1.0) grayscale(0);
+  filter: opacity(1.0) grayscale(0);
+}
+
+.inactive {
+	opacity: 0.3;
+}
+
+#dashboard > #clock > #center {
     margin-left: auto;
     margin-right: auto;
     position: absolute;
     top: 50%;
     width: 100%;
     transform: translateY(-50%);
-    font-size: 4rem;
-    text-shadow: 0px 0px 2px #000;
+		animation-name: fadein;
+		animation-duration: 2s;
+
+		-webkit-filter: opacity(1.0) ;
+		filter: opacity(1.0) ;
+
+}
+
+#dashboard > #clock > #center > #time {
+	font-size: 4rem;
+	padding-bottom: 1rem;
 }
 
 #dashboard > #clock {
@@ -36,18 +80,17 @@ body {
   background: black; /* Just to visualize the extent */
 }
 
-#dashboard > #bottom { 
+#dashboard > #bottom {
     right: 0;
     bottom: 0;
     opacity: 0.8;
     text-align: center;
     position: fixed;
-    background: black;
     padding: 0.5rem;
     overflow: auto;
-    animation-name: rightin;
-    animation-duration: 2s;
-
+    animation-name: fadein;
+    animation-duration: 3s;
+		padding-right: 1rem;
 }
 
 @keyframes leftin {
@@ -60,24 +103,28 @@ body {
     to {right: 0}
   }
 
-#dashboard > #middle-bottom { 
+#dashboard > #middle-bottom {
     bottom: 0;
     opacity: 0.8;
     text-align: center;
     position: fixed;
-    background: black;
     padding: 0.5rem;
     overflow: auto;
+		animation-name: fadein;
+		animation-duration: 3s;
+		padding-left: 1rem;
+
 }
 a {
-    color: white
+    color: white;
+		text-decoration: none;
 }
 
-a:hover { 
+a:hover {
+    color: white;
+
+}
+
+a:visited {
     color: white;
 }
-
-a:visited { 
-    color: white;
-}
-

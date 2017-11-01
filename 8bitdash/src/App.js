@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Button} from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import "./App.css";
 
@@ -78,29 +78,74 @@ function getRandomIntInclusive(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-class Settings extends Component {
-  render() {
-    return <div>Settings here</div>;
-  }
-}
 
 class Dashboard extends Component {
   constructor(props) {
     super(props);
+    this.storage = window.localStorage;
     this.update();
   }
 
   update() {
     const selected = this.random();
+
+    var clockActivated = this.storage.getItem('clockActivated')
+    var greetingActivated = this.storage.getItem('greetingActivated')
+
+    console.log(clockActivated)
+    console.log(greetingActivated)
+
+    if(clockActivated === undefined) {
+      this.storage.setItem("clockActivated", 1)
+      clockActivated = true
+    }
+    if(greetingActivated === undefined) {
+      this.storage.setItem("greetingActivated", 1)
+      greetingActivated = true
+    }
+
     this.state = {
       backdrop: selected.artist + "/" + selected.filename,
       artist: credits[selected.artist],
-      time: this.time()
+      time: this.time(),
+      settingsActivated: false,
+      clockActivated: clockActivated,
+      greetingActivated: greetingActivated
     };
   }
 
   imagePath(bd) {
     return bd.artist + "/" + bd.filename;
+  }
+
+  greeting(hours, timeOfDay) {
+    const rnd = a => a[getRandomIntInclusive(0, a.length - 1)]
+    const lunch = ["Enjoy your break", "Lunch time!", "Enjoy your lunch"]
+    const morning = ["Good Morning", "Have a wonderful day", "Enjoy your day", "Thanks for watching"]
+    const night = ["Sleep well", "Good Night", "Night night", "Time for bed"]
+    const afternoon = ["Call it a day", "Pack up work", "Finish Move", "Game Over"]
+
+    var res = ""
+    if(timeOfDay == "am") {
+      if(hours > 5) {
+        res = rnd(morning)
+      } if(hours > 11) {
+        res = rnd(lunch)
+      } else {
+        res = rnd(night)
+      }
+    } else { // "pm"
+      if(hours > 5) {
+        res = "Good Evening"
+      }
+      if(hours > 9) {
+        res = "Good Night"
+      }
+      else {
+        res = rnd(afternoon)
+      }
+    }
+    return res;
   }
 
   time() {
@@ -118,7 +163,10 @@ class Dashboard extends Component {
     const currentTimeString =
       currentHours + ":" + currentMinutes + " " + timeOfDay;
 
-    return currentTimeString;
+    return {
+      greeting: this.greeting(currentHours, timeOfDay),
+      clock: currentTimeString
+    }
   }
 
   random() {
@@ -140,9 +188,17 @@ class Dashboard extends Component {
         eventLabel="shop"
         to="https://8bitdash.threadless.com/"
       >
-        Visit the Artist Shop
+        Shop
       </ReactGA.OutboundLink>
     );
+  }
+
+  toggleSettings() {
+    this.state.settingsActivated = true
+
+  }
+  untoggleSettings() {
+    this.state.settingsActivated = false
   }
 
   render() {
@@ -151,17 +207,65 @@ class Dashboard extends Component {
         "url('" + this.state.backdrop + "') no-repeat center center fixed",
       backgroundSize: "cover"
     };
-    return (
+    const {clock, greeting} = this.state.time
+
+    if(this.state.settingsActivated) {
+      return(this.renderSettings(style))
+    } else {
+      return (this.renderDashboard(style, clock, greeting));
+  }
+  }
+  renderDashboard(style, clock, greeting) {
+    return(
       <div id="dashboard">
         <div style={style} id="clock">
-          <div id="center">{this.state.time}</div>
+          <div id="center">
+            {this.state.clockActivated == 1 ? (<div id="time" className="textshadow">{clock}</div>) : <div/>}
+            {this.state.greetingActivated == 1 ? (<div id="greeting" className="textshadow">{greeting}</div>) : <div/>}
+          </div>
         </div>
-        <div id="bottom">{this.shop()}</div>
-        <div id="middle-bottom">{this.state.artist}</div>
+        <div id="bottom" className="textshadow">{this.shop()}
+        <a href="#" onClick={this.toggleSettings()}> - Settings</a></div>
+        <div id="middle-bottom" className="textshadow">&#x0011; {this.state.artist}</div>
       </div>
-    );
+    )
+  }
+
+  toggleClock() {
+    this.state.clockActivated = !this.state.clockActivated
+    this.storage.setItem("clockActivated", this.state.clockActivated ? 1 : 0)
+  }
+
+  toggleGreetings() {
+    this.state.greetingActivated = this.state.greetingActivated
+    this.storage.setItem("greetingActivated", this.state.greetingActivated ? 1 : 0)
+  }
+
+  renderSettings(style) {
+    return(
+    <div id="dashboard">
+      <div style={style} id="clock" className="bw">
+        <div id="center" className="color">
+          <div  className="textshadow">8bitdash since 2015</div>
+          <div  className="textshadow">--------------</div>
+          <div><a href="#" onClick={() => this.toggleClock()} className={this.state.clockActivated ? "active" : "inactive"}>Show clock</a></div>
+          <div><a href="#" onClick={() => this.toggleGreetings()} className={this.state.greetingActivated ? "active" : "inactive"}>Show greetings</a></div>
+          <div  className="textshadow">--------------</div>
+          <div  className="textshadow">Amazing art pieces by: </div>
+          <div  className="textshadow">kirokaze</div>
+          <div  className="textshadow">valenberg</div>
+          <div  className="textshadow">mark ferrari</div>
+          <div  className="textshadow">--------------</div>
+    <div  className="textshadow"><a href="https://www.madewithtea.com">madewithtea.com</a></div>
+        <div  className="textshadow"><a href="https://www.madewithtea.com">since 2015</a></div>
+        </div>
+      </div>
+      <div id="bottom" className="textshadow"><a href="#" onClick={this.untoggleSettings()}>back</a></div>
+      <div id="middle-bottom" className="textshadow"><a href="#" onClick={this.untoggleSettings()}>back</a></div>
+    </div>)
   }
 }
+
 
 class App extends Component {
   render() {
@@ -169,7 +273,6 @@ class App extends Component {
       <Router>
         <div>
           <Route exact={true} path="/" component={Dashboard} />
-          <Route path="/settings" component={Settings} />
         </div>
       </Router>
     );
