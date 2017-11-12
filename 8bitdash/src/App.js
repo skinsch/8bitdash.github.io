@@ -4,6 +4,10 @@ import "./App.css";
 
 var ReactGA = require("react-ga");
 
+const persistence = "v1"
+const lsClockActivated = `${persistence}-clock-activated`
+const lsGreetingActivated = `${persistence}-greet-activated`
+
 const credits = {
   kirokaze: "Kirokaze",
   valenberg: "Valenberg",
@@ -78,7 +82,6 @@ function getRandomIntInclusive(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-
 class Dashboard extends Component {
   constructor(props) {
     super(props);
@@ -89,18 +92,20 @@ class Dashboard extends Component {
   update() {
     const selected = this.random();
 
-    var clockActivated = this.storage.getItem('clockActivated')
-    var greetingActivated = this.storage.getItem('greetingActivated')
+    var clockActivated = 
+      JSON.parse(this.storage.getItem(lsClockActivated))
+    var greetingActivated = 
+      JSON.parse(this.storage.getItem(lsGreetingActivated))
 
-    console.log(clockActivated)
-    console.log(greetingActivated)
+    console.log(`clock activated ${clockActivated}`)
+    console.log(`greeting activated ${greetingActivated}`)
 
-    if(clockActivated === undefined) {
-      this.storage.setItem("clockActivated", 1)
+    if(clockActivated == null) {
+      this.storage.setItem(lsClockActivated, "true")
       clockActivated = true
     }
-    if(greetingActivated === undefined) {
-      this.storage.setItem("greetingActivated", 1)
+    if(greetingActivated == null) {
+      this.storage.setItem(lsGreetingActivated, "true")
       greetingActivated = true
     }
 
@@ -220,8 +225,8 @@ class Dashboard extends Component {
       <div id="dashboard">
         <div style={style} id="clock">
           <div id="center">
-            {this.state.clockActivated == 1 ? (<div id="time" className="textshadow">{clock}</div>) : <div/>}
-            {this.state.greetingActivated == 1 ? (<div id="greeting" className="textshadow">{greeting}</div>) : <div/>}
+            {this.state.clockActivated == true ? (<div id="time" className="textshadow">{clock}</div>) : <div/>}
+            {this.state.greetingActivated == true  ? (<div id="greeting" className="textshadow">{greeting}</div>) : <div/>}
           </div>
         </div>
         <div id="bottom" className="textshadow">{this.shop()}
@@ -233,12 +238,12 @@ class Dashboard extends Component {
 
   toggleClock() {
     this.state.clockActivated = !this.state.clockActivated
-    this.storage.setItem("clockActivated", this.state.clockActivated ? 1 : 0)
+    this.storage.setItem(lsClockActivated, this.state.clockActivated ? "true" : "false")
   }
 
   toggleGreetings() {
-    this.state.greetingActivated = this.state.greetingActivated
-    this.storage.setItem("greetingActivated", this.state.greetingActivated ? 1 : 0)
+    this.state.greetingActivated = !this.state.greetingActivated
+    this.storage.setItem(lsGreetingActivated, this.state.greetingActivated ? "true" : "false")
   }
 
   renderSettings(style) {
@@ -248,8 +253,8 @@ class Dashboard extends Component {
         <div id="center" className="color">
           <div  className="textshadow">8bitdash since 2015</div>
           <div  className="textshadow">--------------</div>
-          <div><a href="#" onClick={() => this.toggleClock()} className={this.state.clockActivated ? "active" : "inactive"}>Show clock</a></div>
-          <div><a href="#" onClick={() => this.toggleGreetings()} className={this.state.greetingActivated ? "active" : "inactive"}>Show greetings</a></div>
+          <div className="textshadow"><a href="#" onClick={() => this.toggleClock()} className={this.state.clockActivated ? "active" : "inactive"}>Show clock</a></div>
+          <div className="textshadow"><a href="#" onClick={() => this.toggleGreetings()} className={this.state.greetingActivated ? "active" : "inactive"}>Show greetings</a></div>
           <div  className="textshadow">--------------</div>
           <div  className="textshadow">Amazing art pieces by: </div>
           <div  className="textshadow">kirokaze</div>
